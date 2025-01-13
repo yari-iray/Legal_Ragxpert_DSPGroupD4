@@ -1,0 +1,5 @@
+Neo4j/
+__pycache__/
+
+.pyc
+data/huggingface/

@@ -19,7 +19,7 @@ from llama_index.core.storage.docstore import DocumentStore
 from ..core.engine import LocalChatEngine, LocalRetriever
 from ..core.model import LocalRAGModel
 from ..setting import RAGSettings
-from ..ollama import is_port_open, run_ollama_server
+from ..ollama_server import is_port_open, run_ollama_server
 
 load_dotenv()
 

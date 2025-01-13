@@ -10,6 +10,9 @@ from llama_index.core import Settings
 from llama_index.core.chat_engine.types import StreamingAgentChatResponse
 from llama_index.core.prompts import ChatMessage, MessageRole
 
+from langchain.graphs import Neo4jGraph
+from langchain.chains.graph_qa.base import GraphQAChain
+
 
 class LocalRAGPipeline:
     def __init__(self, host: str = "host.docker.internal") -> None:
@@ -112,6 +115,8 @@ class LocalRAGPipeline:
     def query(
         self, mode: str, message: str, chatbot: list[list[str]]
     ) -> StreamingAgentChatResponse:
+        
+        
         if mode == "chat":
             history = self.get_history(chatbot)
             return self._query_engine.stream_chat(message, history)

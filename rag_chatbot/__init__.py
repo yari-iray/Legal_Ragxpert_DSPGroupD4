@@ -1,5 +1,5 @@
 from .pipeline import LocalRAGPipeline
-from .ollama import run_ollama_server
+from .ollama_server import run_ollama_server
 
 __all__ = [
     "LocalRAGPipeline",

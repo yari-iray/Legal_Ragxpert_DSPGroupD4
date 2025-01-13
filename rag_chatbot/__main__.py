@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 from .ui import LocalChatbotUI
 from .pipeline import LocalRAGPipeline
 from .logger import Logger
-from .ollama import run_ollama_server, is_port_open
+from .ollama_server import run_ollama_server, is_port_open
 
 load_dotenv()
 
