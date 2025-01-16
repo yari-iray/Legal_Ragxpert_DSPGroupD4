@@ -4,6 +4,8 @@ from ...setting import RAGSettings
 from dotenv import load_dotenv
 import requests
 
+from langchain_ollama.llms import OllamaLLM
+
 load_dotenv()
 
 
@@ -18,29 +20,44 @@ class LocalRAGModel:
         host: str = "host.docker.internal",
         setting: RAGSettings | None = None
     ):
-        setting = setting or RAGSettings()
         if model_name in ["gpt-3.5-turbo", "gpt-4", "gpt-4o", "gpt-4-turbo"]:
-            return OpenAI(
-                model=model_name,
-                temperature=setting.ollama.temperature
-            )
-        else:
-            settings_kwargs = {
-                "tfs_z": setting.ollama.tfs_z,
-                "top_k": setting.ollama.top_k,
-                "top_p": setting.ollama.top_p,
-                "repeat_last_n": setting.ollama.repeat_last_n,
-                "repeat_penalty": setting.ollama.repeat_penalty,
-            }
-            return Ollama(
-                model=model_name,
-                system_prompt=system_prompt,
-                base_url=f"http://{host}:{setting.ollama.port}",
-                temperature=setting.ollama.temperature,
-                context_window=setting.ollama.context_window,
-                request_timeout=setting.ollama.request_timeout,
-                additional_kwargs=settings_kwargs
-            )
+            raise ValueError("model not supported")
+        
+        setting = setting or RAGSettings()
+
+        # settings_kwargs = {
+        #     "tfs_z": setting.ollama.tfs_z,
+        #     "top_k": setting.ollama.top_k,
+        #     "top_p": setting.ollama.top_p,
+        #     "repeat_last_n": setting.ollama.repeat_last_n,
+        #     "repeat_penalty": setting.ollama.repeat_penalty,
+        # }
+        
+        ol = OllamaLLM(
+            model=model_name,
+            temperature=setting.ollama.temperature,
+            base_url=f"http://{host}:{setting.ollama.port}",
+
+            tfs_z=setting.ollama.tfs_z,
+            top_k=setting.ollama.top_k,
+            top_p=setting.ollama.top_p,
+            repeat_last_n=setting.ollama.repeat_last_n,
+            repeat_penalty=setting.ollama.repeat_penalty,
+            
+        )
+        
+        return ol
+        
+        
+        # return Ollama(
+        #     model=model_name,
+        #     system_prompt=system_prompt,
+        #     base_url=f"http://{host}:{setting.ollama.port}",
+        #     temperature=setting.ollama.temperature,
+        #     context_window=setting.ollama.context_window,
+        #     request_timeout=setting.ollama.request_timeout,
+        #     additional_kwargs=settings_kwargs
+        # )
 
     @staticmethod
     def pull(host: str, model_name: str):
@@ -61,7 +78,7 @@ class LocalRAGModel:
         ).json()
         if data["models"] is None:
             return False
-        list_model = [d["name"] for d in data["models"]]
+        list_model = {d["name"] for d in data["models"]}
         if model_name in list_model:
             return True
         return False

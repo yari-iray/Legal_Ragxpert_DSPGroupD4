@@ -166,7 +166,7 @@ class LocalChatbotUI:
     def _change_model(self, model: str):
         if model not in [None, ""]:
             self._pipeline.set_model_name(model)
-            self._pipeline.set_model()
+            self._pipeline.refresh_model()
             self._pipeline.set_engine()
             gr.Info(f"Change model to {model}!")
         return DefaultElement.DEFAULT_STATUS

@@ -4,7 +4,7 @@ import argparse
 import pandas as pd
 from dotenv import load_dotenv
 from tqdm.asyncio import tqdm_asyncio
-from llama_index.core import VectorStoreIndex, Settings
+from llama_index.core import VectorStoreIndex
 from llama_index.core.retrievers import VectorIndexRetriever
 from llama_index.retrievers.bm25 import BM25Retriever
 from llama_index.core.postprocessor import SentenceTransformerRerank
@@ -41,8 +41,6 @@ class RAGPipelineEvaluator:
         self._llm = LocalRAGModel.set(model_name=llm, host=host)
         self._teacher = LocalRAGModel.set(model_name=teacher, host=host)
         self._engine = LocalChatEngine(host=host)
-        Settings.llm = self._llm
-        # Settings.embed_model = LocalEmbedding.set()
 
         # dataset
         docstore = DocumentStore.from_persist_path(docstore_path)
