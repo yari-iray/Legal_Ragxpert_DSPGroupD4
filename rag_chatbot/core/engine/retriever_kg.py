@@ -28,7 +28,7 @@ class _Connectivity:
     _metadata: Any | None = None
     
     @staticmethod
-    def get_metadata(neo4j: Neo4jGraphStore):
+    def get_metadata(neo4j: Neo4jGraphStore):        
         if _Connectivity._metadata:
             return _Connectivity._metadata
         
@@ -172,7 +172,7 @@ class CustomNeo4jRetriever(BaseRetriever):
         # Reorder the nodes based on the LLM's reranking
         # This is to ensure that all nodes are output in case the llm outputs a bad response
         nodes_copy = nodes.copy()
-        
+                
         reranked_nodes = []
         
         for node_id in split_llm_output:
@@ -186,7 +186,7 @@ class CustomNeo4jRetriever(BaseRetriever):
                 if str(node.node.node_id) != match:
                     continue
                 
-                if not node in nodes:
+                if not node in reranked_nodes:
                     reranked_nodes.append(node)
                     nodes_copy.remove(node)
                 break
