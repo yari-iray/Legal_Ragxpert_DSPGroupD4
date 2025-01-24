@@ -1,17 +1,16 @@
 from .core import (
     LocalChatEngine,
     LocalDataIngestion,
-    LocalRAGModel,
+    LocalKgModels,
     LocalEmbedding,
     LocalVectorStore,
+    LocalKnowledgegraph,
     get_system_prompt,
 )
 from llama_index.core import Settings
 from llama_index.core.chat_engine.types import StreamingAgentChatResponse
 from llama_index.core.prompts import ChatMessage, MessageRole
 
-from langchain.graphs import Neo4jGraph
-from langchain.chains.graph_qa.base import GraphQAChain
 
 
 class LocalRAGPipeline:
@@ -21,11 +20,11 @@ class LocalRAGPipeline:
         self._model_name = ""
         self._system_prompt = get_system_prompt("eng", is_rag_prompt=False)
         self._engine = LocalChatEngine(host=host)
-        self._default_model = LocalRAGModel.set(self._model_name, host=host)
+        self._default_model = LocalKgModels.set(self._model_name, host=host)
         self._query_engine = None
         self._ingestion = LocalDataIngestion()
-        self._vector_store = LocalVectorStore(host=host)
-        Settings.llm = LocalRAGModel.set(host=host)
+        self._knowledge_graph_impl = LocalKnowledgegraph(host=host)
+        Settings.llm = LocalKgModels.set(host=host)
         Settings.embed_model = LocalEmbedding.set(host=host)
 
     def get_model_name(self):
@@ -49,7 +48,7 @@ class LocalRAGPipeline:
         )
 
     def set_model(self):
-        Settings.llm = LocalRAGModel.set(
+        Settings.llm = LocalKgModels.set(
             model_name=self._model_name,
             system_prompt=self._system_prompt,
             host=self._host,
@@ -77,13 +76,13 @@ class LocalRAGPipeline:
         Settings.embed_model = LocalEmbedding.set(model_name, self._host)
 
     def pull_model(self, model_name: str):
-        return LocalRAGModel.pull(self._host, model_name)
+        return LocalKgModels.pull(self._host, model_name)
 
     def pull_embed_model(self, model_name: str):
         return LocalEmbedding.pull(self._host, model_name)
 
     def check_exist(self, model_name: str) -> bool:
-        return LocalRAGModel.check_model_exist(self._host, model_name)
+        return LocalKgModels.check_model_exists(self._host, model_name)
 
     def check_exist_embed(self, model_name: str) -> bool:
         return LocalEmbedding.check_model_exist(self._host, model_name)
@@ -100,7 +99,7 @@ class LocalRAGPipeline:
     def set_engine(self):
         self._query_engine = self._engine.set_engine(
             llm=self._default_model,
-            nodes=self._ingestion.get_ingested_nodes(),
+            nodes=None,
             language=self._language,
         )
 

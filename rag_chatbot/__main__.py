@@ -9,7 +9,7 @@ from .ollama_server import run_ollama_server, is_port_open
 load_dotenv()
 
 # CONSTANTS
-LOG_FILE = "logging.log"
+LOG_FILE = "./logs/logging.log"
 DATA_DIR = "data/data"
 AVATAR_IMAGES = ["./assets/user.png", "./assets/bot.jpg"]
 
@@ -33,7 +33,7 @@ if args.host != "host.docker.internal":
 
 # LOGGER
 
-llama_index.core.set_global_handler("simple")
+llama_index.core.set_global_handler("simple") # type: ignore
 logger = Logger(LOG_FILE)
 logger.reset_logs()
 

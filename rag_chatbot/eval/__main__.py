@@ -17,7 +17,7 @@ from llama_index.core.evaluation import (
 from llama_index.core.evaluation import EmbeddingQAFinetuneDataset
 from llama_index.core.storage.docstore import DocumentStore
 from ..core.engine import LocalChatEngine, LocalRetriever
-from ..core.model import LocalRAGModel
+from ..core.model import LocalKgModels
 from ..setting import RAGSettings
 from ..ollama_server import is_port_open, run_ollama_server
 
@@ -36,10 +36,10 @@ class RAGPipelineEvaluator:
         self._setting = RAGSettings()
         if llm not in ["gpt-3.5-turbo", "gpt-4", "gpt-4o", "gpt-4-turbo"]:
             print("Pulling LLM model")
-            LocalRAGModel.pull(host=host, model_name=llm)
+            LocalKgModels.pull(host=host, model_name=llm)
             print("Pulling complete")
-        self._llm = LocalRAGModel.set(model_name=llm, host=host)
-        self._teacher = LocalRAGModel.set(model_name=teacher, host=host)
+        self._llm = LocalKgModels.set(model_name=llm, host=host)
+        self._teacher = LocalKgModels.set(model_name=teacher, host=host)
         self._engine = LocalChatEngine(host=host)
         Settings.llm = self._llm
         # Settings.embed_model = LocalEmbedding.set()

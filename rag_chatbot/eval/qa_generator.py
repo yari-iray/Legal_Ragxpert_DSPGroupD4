@@ -8,7 +8,7 @@ from llama_index.core.llms.utils import LLM
 from llama_index.core.schema import MetadataMode, TextNode
 from llama_index.core.storage.docstore import DocumentStore
 from llama_index.core.evaluation import EmbeddingQAFinetuneDataset
-from ..core.model import LocalRAGModel
+from ..core.model import LocalKgModels
 from ..core.embedding import LocalEmbedding
 from ..core.ingestion import LocalDataIngestion
 from ..setting import RAGSettings
@@ -81,7 +81,7 @@ class QAGenerator:
         setting = RAGSettings()
         setting.ingestion.embed_llm = embed_model or setting.ingestion.embed_llm
         self._embed_model = LocalEmbedding.set(setting)
-        self._llm = LocalRAGModel.set(model_name=llm or setting.ollama.llm, host=host)
+        self._llm = LocalKgModels.set(model_name=llm or setting.ollama.llm, host=host)
         self._ingestion = LocalDataIngestion()
 
     def generate(

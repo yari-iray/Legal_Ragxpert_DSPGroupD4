@@ -6,8 +6,7 @@ import requests
 
 load_dotenv()
 
-
-class LocalRAGModel:
+class LocalKgModels:
     def __init__(self) -> None:
         pass
 
@@ -54,7 +53,7 @@ class LocalRAGModel:
         )
 
     @staticmethod
-    def check_model_exist(host: str, model_name: str) -> bool:
+    def check_model_exists(host: str, model_name: str) -> bool:
         setting = RAGSettings()
         data = requests.get(
             f"http://{host}:{setting.ollama.port}/api/tags"

@@ -126,3 +126,20 @@ source ./scripts/run.sh --ngrok
 ## 🌟 Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=datvodinh/rag-chatbot&type=Date)](https://star-history.com/#datvodinh/rag-chatbot&Date)
+
+
+### Additions for DSP from Yari:
+In the current form, not all packages are explicitly compatible with each other, thus we use a workaround to get all the packages working.
+
+WARNING: this can break your Python environment. Please use a virtual environment.
+
+#### To install everything properly:
+1. Ensure that you have installed poetry
+2. Set the working directory in your terminal to this folder
+3. Run poetry install to install the dependencies
+4. Run `pip install llama-index-graph-stores-neo4j`
+5. Run `pip install llama-index -U`
+5. Run `pip install llama-index-core -U`
+
+There will be errors shown that  pip is not taking into account all packages, as not all packages are explicitly compatible with each other.
+The chatbot will still run.

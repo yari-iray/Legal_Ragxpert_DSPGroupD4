@@ -1,5 +1,5 @@
-from .model import LocalRAGModel
+from .model import LocalKgModels
 
 __all__ = [
-    "LocalRAGModel",
+    "LocalKgModels",
 ]
