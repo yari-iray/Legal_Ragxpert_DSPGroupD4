@@ -3,7 +3,6 @@ from .core import (
     LocalDataIngestion,
     LocalKgModels,
     LocalEmbedding,
-    LocalKnowledgegraph,
     get_system_prompt,
 )
 from llama_index.core import Settings
@@ -17,12 +16,11 @@ class LocalRAGPipeline:
         self._host = host
         self._language = "eng"
         self._model_name = ""
-        self._system_prompt = get_system_prompt("eng", is_rag_prompt=False)
+        self._system_prompt = get_system_prompt(is_rag_prompt=False)
         self._engine = LocalChatEngine(host=host)
         self._default_model = LocalKgModels.set(self._model_name, host=host)
         self._query_engine = None
         self._ingestion = LocalDataIngestion()
-        self._knowledge_graph_impl = LocalKnowledgegraph(host=host)
         Settings.llm = LocalKgModels.set(host=host)
         Settings.embed_model = LocalEmbedding.set(host=host)
 
@@ -54,9 +52,9 @@ class LocalRAGPipeline:
         )
         self._default_model = Settings.llm
 
-    def reset_engine(self):
+    def reset_engine(self, mode):
         self._query_engine = self._engine.set_engine(
-            llm=self._default_model, nodes=[]
+            llm=self._default_model, mode=mode
         )
 
     def reset_documents(self):
@@ -65,8 +63,8 @@ class LocalRAGPipeline:
     def clear_conversation(self):
         self._query_engine.reset()
 
-    def reset_conversation(self):
-        self.reset_engine()
+    def reset_conversation(self, mode = "kg"):
+        self.reset_engine(mode)
         self.set_system_prompt(
             get_system_prompt(language=self._language, is_rag_prompt=False)
         )
@@ -95,10 +93,10 @@ class LocalRAGPipeline:
         self.set_model()
         self.set_engine()
 
-    def set_engine(self):
+    def set_engine(self, mode = "kg"):
         self._query_engine = self._engine.set_engine(
             llm=self._default_model,
-            nodes=None,
+            mode=mode,
         )
 
     def get_history(self, chatbot: list[list[str]]):
@@ -111,12 +109,12 @@ class LocalRAGPipeline:
 
     def query(
         self, mode: str, message: str, chatbot: list[list[str]]
-    ) -> StreamingAgentChatResponse:
-        
-        
+    ) -> StreamingAgentChatResponse:       
         if mode == "chat":
             history = self.get_history(chatbot)
             return self._query_engine.stream_chat(message, history)
-        else:
+        elif mode == "kg":
             self._query_engine.reset()
             return self._query_engine.stream_chat(message)
+        
+        raise NotImplementedError()

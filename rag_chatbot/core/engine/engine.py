@@ -13,7 +13,6 @@ class LocalChatEngine:
         setting: RAGSettings | None = None,
         host: str = "host.docker.internal"
     ):
-        super().__init__()
         self._setting = setting or RAGSettings()
         self._retrieverprovider = LocalRetrieverProvider(self._setting)
         self._host = host
@@ -21,11 +20,11 @@ class LocalChatEngine:
     def set_engine(
         self,
         llm: LLM,
-        nodes: List[BaseNode] | None,
+        mode: str = "kg",
     ) -> CondensePlusContextChatEngine | SimpleChatEngine:
 
         # Normal chat engine
-        if not nodes or len(nodes) == 0:
+        if mode == "chat":
             return SimpleChatEngine.from_defaults(
                 llm=llm,
                 memory=ChatMemoryBuffer(
@@ -33,15 +32,15 @@ class LocalChatEngine:
                 )
             )
 
-        # Chat engine with documents
-        retriever = self._retrieverprovider.get_retriever(
-            llm=llm,
-            nodes=nodes
-        )
-        return CondensePlusContextChatEngine.from_defaults(
-            retriever=retriever,
-            llm=llm,
-            memory=ChatMemoryBuffer(
-                token_limit=self._setting.ollama.chat_token_limit
+        elif mode == "kg":
+            # Chat engine with documents
+            retriever = self._retrieverprovider.get_retriever(llm=llm)
+            return CondensePlusContextChatEngine.from_defaults(
+                retriever=retriever,
+                llm=llm,
+                memory=ChatMemoryBuffer(
+                    token_limit=self._setting.ollama.chat_token_limit
+                )
             )
-        )
+            
+        raise NotImplementedError()

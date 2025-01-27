@@ -2,12 +2,10 @@ import os
 import requests
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 from llama_index.embeddings.openai import OpenAIEmbedding
-from ...setting import RAGSettings
+from ...setting import RAGSettings    
 from dotenv import load_dotenv
 
-
 load_dotenv()
-
 
 class LocalEmbedding:
     @staticmethod

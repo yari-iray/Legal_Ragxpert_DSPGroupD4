@@ -39,11 +39,10 @@ class LocalRetrieverProvider:
 
     def get_retriever(
         self,
-        nodes: List[BaseNode],
+        nodes: List[BaseNode] | None = None,
         llm: LLM | None = None,
     ):
         # Unused, might be useful in future implementations if moving to a hybrid implementations
         # with a kg and doc store
-        del nodes      
         
         return CustomNeo4jRetriever(self._graph_store, llm)

@@ -60,11 +60,13 @@ class CustomNeo4jRetriever(BaseRetriever):
         """
         user_query = query_bundle.query_str
         
-        # Execute the cypher query
+        # Step 1: Build cypher query
         cypher_query = self._generate_cypher_query(user_query)
+        
+        # Step 2: Execute cypher query
         results: list[dict] = self._graph_store.query(cypher_query)
         
-        # todo, generate list of nodes
+        # Step 3: Do basic ranking
         nodes: list[NodeWithScore] = []
         for record in results:
             n = TextNode(
@@ -83,7 +85,7 @@ class CustomNeo4jRetriever(BaseRetriever):
             nodes,
             key=lambda node: node.score or 0,
             reverse=True
-        )          
+        )
 
         # Step 4: Rerank the results using our reranking model
         ranked_nodes = self._rerank_nodes(query_bundle, ranked_nodes)
