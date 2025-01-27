@@ -4,9 +4,7 @@ def get_context_prompt(language: str) -> str:
     return CONTEXT_PROMPT_EN
 
 
-def get_system_prompt(language: str, is_rag_prompt: bool = True) -> str:
-    if language != "eng":
-        raise NotImplementedError()
+def get_system_prompt(is_rag_prompt: bool = True) -> str:
     return SYSTEM_PROMPT_RAG_EN if is_rag_prompt else SYSTEM_PROMPT_EN
 
 

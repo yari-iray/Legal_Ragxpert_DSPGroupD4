@@ -3,7 +3,6 @@ from .core import (
     LocalDataIngestion,
     LocalKgModels,
     LocalEmbedding,
-    LocalVectorStore,
     LocalKnowledgegraph,
     get_system_prompt,
 )
@@ -44,7 +43,7 @@ class LocalRAGPipeline:
 
     def set_system_prompt(self, system_prompt: str | None = None):
         self._system_prompt = system_prompt or get_system_prompt(
-            language=self._language, is_rag_prompt=self._ingestion.check_nodes_exist()
+            is_rag_prompt=self._ingestion.check_nodes_exist()
         )
 
     def set_model(self):
@@ -57,7 +56,7 @@ class LocalRAGPipeline:
 
     def reset_engine(self):
         self._query_engine = self._engine.set_engine(
-            llm=self._default_model, nodes=[], language=self._language
+            llm=self._default_model, nodes=[]
         )
 
     def reset_documents(self):
@@ -100,7 +99,6 @@ class LocalRAGPipeline:
         self._query_engine = self._engine.set_engine(
             llm=self._default_model,
             nodes=None,
-            language=self._language,
         )
 
     def get_history(self, chatbot: list[list[str]]):

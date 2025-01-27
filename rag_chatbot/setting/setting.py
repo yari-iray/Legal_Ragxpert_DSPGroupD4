@@ -52,7 +52,7 @@ class RetrieverSettings(BaseModel):
         default=[0.4, 0.6], description="Weights for retriever"
     )
     top_k_rerank: int = Field(
-        default=6, description="Top k rerank"
+        default=10, description="Top k rerank"
     )
     rerank_llm: str = Field(
         default="BAAI/bge-reranker-large", description="Rerank LLM model"
@@ -61,6 +61,19 @@ class RetrieverSettings(BaseModel):
         default="dist_based_score", description="Fusion mode"
     )
 
+class Neo4jSettings(BaseModel):
+    username: str = Field(
+        default="neo4j", description="Username for Neo4j db instance"
+    )
+    password: str = Field(
+        default="password", description="Password for Neo4j db instance"
+    )
+    url: str = Field(
+        default="bolt://localhost:7687", description="URL for Neo4j db instance"
+    )
+    database: str = Field(
+        default="neo4j", description="Database to use for Neo4j db instance"
+    )
 
 class IngestionSettings(BaseModel):
     embed_llm: str = Field(
@@ -109,3 +122,4 @@ class RAGSettings(BaseModel):
     retriever: RetrieverSettings = RetrieverSettings()
     ingestion: IngestionSettings = IngestionSettings()
     storage: StorageSettings = StorageSettings()
+    neo4j: Neo4jSettings = Neo4jSettings()

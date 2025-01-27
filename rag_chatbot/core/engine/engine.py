@@ -3,7 +3,7 @@ from llama_index.core.memory import ChatMemoryBuffer
 from llama_index.core.llms.llm import LLM
 from llama_index.core.schema import BaseNode
 from typing import List
-from .retriever import LocalRetriever
+from .retriever import LocalRetrieverProvider
 from ...setting import RAGSettings
 
 
@@ -15,18 +15,17 @@ class LocalChatEngine:
     ):
         super().__init__()
         self._setting = setting or RAGSettings()
-        self._retriever = LocalRetriever(self._setting)
+        self._retrieverprovider = LocalRetrieverProvider(self._setting)
         self._host = host
 
     def set_engine(
         self,
         llm: LLM,
-        nodes: List[BaseNode],
-        language: str = "eng",
+        nodes: List[BaseNode] | None,
     ) -> CondensePlusContextChatEngine | SimpleChatEngine:
 
         # Normal chat engine
-        if len(nodes) == 0:
+        if not nodes or len(nodes) == 0:
             return SimpleChatEngine.from_defaults(
                 llm=llm,
                 memory=ChatMemoryBuffer(
@@ -35,9 +34,8 @@ class LocalChatEngine:
             )
 
         # Chat engine with documents
-        retriever = self._retriever.get_retrievers(
+        retriever = self._retrieverprovider.get_retriever(
             llm=llm,
-            language=language,
             nodes=nodes
         )
         return CondensePlusContextChatEngine.from_defaults(
