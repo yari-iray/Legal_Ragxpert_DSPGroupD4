@@ -1,9 +1,7 @@
 import os
-import torch
 import requests
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 from llama_index.embeddings.openai import OpenAIEmbedding
-from transformers import AutoModel, AutoTokenizer
 from ...setting import RAGSettings
 from dotenv import load_dotenv
 
@@ -16,8 +14,6 @@ class LocalEmbedding:
     def set(setting: RAGSettings | None = None, **kwargs):
         setting = setting or RAGSettings()
         model_name = setting.ingestion.embed_llm
-        
-        print(f"THE MODEL ISSSSZSDFADFDFZSDFZSDFSDFSDFSDF {model_name} ")
         
         if model_name != "text-embedding-ada-002":
             return HuggingFaceEmbedding(

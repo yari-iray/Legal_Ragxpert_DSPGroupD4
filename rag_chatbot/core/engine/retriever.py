@@ -1,22 +1,32 @@
 from typing import List
 from dotenv import load_dotenv
+from llama_cloud import RetrievalMode
 from llama_index.core.retrievers import (
     BaseRetriever,
     QueryFusionRetriever,
-    VectorIndexRetriever,
-    RouterRetriever
+    # VectorIndexRetriever,    
+    KnowledgeGraphRAGRetriever,
+    RouterRetriever,
 )
 from llama_index.core.callbacks.base import CallbackManager
 from llama_index.core.retrievers.fusion_retriever import FUSION_MODES
 from llama_index.core.postprocessor import SentenceTransformerRerank
 from llama_index.core.tools import RetrieverTool
 from llama_index.core.selectors import LLMSingleSelector
+
 from llama_index.core.schema import BaseNode, NodeWithScore, QueryBundle, IndexNode
 from llama_index.core.llms.llm import LLM
 from llama_index.retrievers.bm25 import BM25Retriever
-from llama_index.core import Settings, VectorStoreIndex
+from llama_index.core import Settings, KnowledgeGraphIndex, PropertyGraphIndex
+
+from .retriever_kg import CustomNeo4jRetriever
 from ..prompt import get_query_gen_prompt
 from ...setting import RAGSettings
+
+from llama_index.graph_stores.neo4j import Neo4jGraphStore
+from llama_index.core import StorageContext
+from llama_index.core.indices.knowledge_graph.retrievers import KGRetrieverMode
+
 
 load_dotenv()
 
@@ -69,6 +79,11 @@ class TwoStageRetriever(QueryFusionRetriever):
         results = self._simple_fusion(results)
         return self._rerank_model.postprocess_nodes(results, query_bundle)
 
+# todo: better place to store this:
+USERNAME = "neo4j"
+PASSWORD = "password"
+URL = "bolt://localhost:7687"
+DATABASE = "neo4j"
 
 class LocalRetriever:
     def __init__(
@@ -80,93 +95,7 @@ class LocalRetriever:
         self._setting = setting or RAGSettings()
         self._host = host
 
-    def _get_normal_retriever(
-        self,
-        vector_index: VectorStoreIndex,
-        llm: LLM | None = None,
-        language: str = "eng",
-    ):
-        llm = llm or Settings.llm
-        return VectorIndexRetriever(
-            index=vector_index,
-            similarity_top_k=self._setting.retriever.similarity_top_k,
-            embed_model=Settings.embed_model,
-            verbose=True
-        )
 
-    def _get_hybrid_retriever(
-        self,
-        vector_index: VectorStoreIndex,
-        llm: LLM | None = None,
-        language: str = "eng",
-        gen_query: bool = True
-    ):
-        # VECTOR INDEX RETRIEVER
-        vector_retriever = VectorIndexRetriever(
-            index=vector_index,
-            similarity_top_k=self._setting.retriever.similarity_top_k,
-            embed_model=Settings.embed_model,
-            verbose=True
-        )
-
-        bm25_retriever = BM25Retriever.from_defaults(
-            index=vector_index,
-            similarity_top_k=self._setting.retriever.similarity_top_k,
-            verbose=True
-        )
-
-        # FUSION RETRIEVER
-        if gen_query:
-            hybrid_retriever = QueryFusionRetriever(
-                retrievers=[bm25_retriever, vector_retriever],
-                retriever_weights=self._setting.retriever.retriever_weights,
-                llm=llm,
-                query_gen_prompt=get_query_gen_prompt(language),
-                similarity_top_k=self._setting.retriever.top_k_rerank,
-                num_queries=self._setting.retriever.num_queries,
-                mode=self._setting.retriever.fusion_mode,
-                verbose=True
-            )
-        else:
-            hybrid_retriever = TwoStageRetriever(
-                retrievers=[bm25_retriever, vector_retriever],
-                retriever_weights=self._setting.retriever.retriever_weights,
-                llm=llm,
-                query_gen_prompt=None,
-                similarity_top_k=self._setting.retriever.similarity_top_k,
-                num_queries=1,
-                mode=self._setting.retriever.fusion_mode,
-                verbose=True
-            )
-
-        return hybrid_retriever
-
-    def _get_router_retriever(
-        self,
-        vector_index: VectorStoreIndex,
-        llm: LLM | None = None,
-        language: str = "eng",
-    ):
-        fusion_tool = RetrieverTool.from_defaults(
-            retriever=self._get_hybrid_retriever(
-                vector_index, llm, language, gen_query=True
-            ),
-            description="Use this tool when the user's query is ambiguous or unclear.",
-            name="Fusion Retriever with BM25 and Vector Retriever and LLM Query Generation."
-        )
-        two_stage_tool = RetrieverTool.from_defaults(
-            retriever=self._get_hybrid_retriever(
-                vector_index, llm, language, gen_query=False
-            ),
-            description="Use this tool when the user's query is clear and unambiguous.",
-            name="Two Stage Retriever with BM25 and Vector Retriever and LLM Rerank."
-        )
-
-        return RouterRetriever.from_defaults(
-            selector=LLMSingleSelector.from_defaults(llm=llm),
-            retriever_tools=[fusion_tool, two_stage_tool],
-            llm=llm
-        )
 
     def get_retrievers(
         self,
@@ -175,10 +104,6 @@ class LocalRetriever:
         language: str = "eng",
 
     ):
-        vector_index = VectorStoreIndex(nodes=nodes)
-        if len(nodes) > self._setting.retriever.top_k_rerank:
-            retriever = self._get_router_retriever(vector_index, llm, language)
-        else:
-            retriever = self._get_normal_retriever(vector_index, llm, language)
+        graph_store = Neo4jGraphStore(USERNAME, PASSWORD, URL, DATABASE)
 
-        return retriever
+        return CustomNeo4jRetriever(graph_store, llm)

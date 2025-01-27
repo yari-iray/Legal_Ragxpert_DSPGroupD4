@@ -1,11 +1,12 @@
-from llama_index.core import VectorStoreIndex
+from llama_index.core import VectorStoreIndex, KnowledgeGraphIndex
 from dotenv import load_dotenv
 from ...setting import RAGSettings
 
 load_dotenv()
 
 
-class LocalVectorStore:
+
+class LocalKnowledgegraph:
     def __init__(
         self,
         host: str = "host.docker.internal",
@@ -18,5 +19,6 @@ class LocalVectorStore:
     def get_index(self, nodes):
         if len(nodes) == 0:
             return None
-        index = VectorStoreIndex(nodes=nodes)
+        
+        index = KnowledgeGraphIndex(nodes=nodes)
         return index

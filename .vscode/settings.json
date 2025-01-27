@@ -1,0 +1,13 @@
+{
+    "python.analysis.autoImportCompletions": true,
+    "python.analysis.extraPaths": ["./rag_chatbot"],
+    "terminal.integrated.env.windows": {
+        "PYTHONPATH": "${workspaceFolder}/rag_chatbot"
+    },
+    "terminal.integrated.env.linux": {
+        "PYTHONPATH": "${workspaceFolder}/rag_chatbot"
+    },
+    "terminal.integrated.env.osx": {
+        "PYTHONPATH": "${workspaceFolder}/rag_chatbot"
+    }
+}
