@@ -141,5 +141,11 @@ WARNING: this can break your Python environment. Please use a virtual environmen
 4. Run `pip install llama-index-graph-stores-neo4j`
 5. Run `pip install llama-index -U`
 5. Run `pip install llama-index-core -U`
+6. Ensure that package version of `llama-index-embeddings-huggingface` is at 0.5.1, otherwise you will get errors that the attribute 'pydantic-private' is missing
 
 There will be errors shown that  pip is not taking into account all packages, as not all packages are explicitly compatible with each other. This message may be ignored, as the chatbot will run without issue. If you get any errors from huggingface, make sure to delete the cache folder first before trying anything else.
+
+## Neo4j configuration
+- Install neo4j
+- Ensure that the configuration is set correctly
+- Probably change the DBMS password to 'password' to get it to work correctly

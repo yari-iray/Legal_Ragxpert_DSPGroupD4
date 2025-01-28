@@ -9,11 +9,8 @@ from llama_index.core.retrievers import (
 from llama_index.core.schema import BaseNode, NodeWithScore, QueryBundle, TextNode
 from llama_index.core.llms.llm import LLM
 from llama_index.core import Settings
-from ..prompt import get_query_gen_prompt
 from ...setting import RAGSettings
 from llama_index.graph_stores.neo4j import Neo4jGraphStore
-from llama_index.core import StorageContext
-from llama_index.core import PromptTemplate
 from llama_index.core.postprocessor import SentenceTransformerRerank
 
 load_dotenv()
@@ -22,26 +19,18 @@ class _Connectivity:
     _metadata: Any | None = None
     
     @staticmethod
-    def get_metadata(neo4j: Neo4jGraphStore):        
+    def get_metadata(graph_store: Neo4jGraphStore):        
         if _Connectivity._metadata:
             return _Connectivity._metadata
         
         query = "CALL apoc.meta.data()"
-        result = neo4j.query(query)
+        result = graph_store.query(query)
         _Connectivity._metadata = result
         
         return result
 
-        
-REFINEMENT_PROMPT = PromptTemplate("""
-        You are a helpful assistant that refines search cypher queries for a graph database.
-        The original query is: "{query}".
-        Provide a refined cypher query that is more likely to retrieve relevant results.)"""
-    )
-
 class CustomNeo4jRetriever(BaseRetriever):
     def __init__(self, graph_store: Neo4jGraphStore, llm: LLM | None = None, setting: RAGSettings | None = None):
-        
         self._setting = setting or RAGSettings()
         self._rerank_model = SentenceTransformerRerank(
             top_n=self._setting.retriever.top_k_rerank,
@@ -50,7 +39,7 @@ class CustomNeo4jRetriever(BaseRetriever):
         
         self._graph_store = graph_store
         self._metadata = _Connectivity.get_metadata(self._graph_store)
-        self._llm = llm or Settings.llm        
+        self._llm = llm or Settings.llm
         
         assert self._llm is not None
 
@@ -67,38 +56,35 @@ class CustomNeo4jRetriever(BaseRetriever):
         results: list[dict] = self._graph_store.query(cypher_query)
         
         # Step 3: Do basic ranking
+        
+        keywords = [x.lower() for x in user_query.split()]
         nodes: list[NodeWithScore] = []
         for record in results:
-            n = TextNode(
+            text_node = TextNode(
                 id_ = str(uuid.uuid4()),
                 text = str(record)
-            ) # type: ignore
+            )
             
             nodes.append(
                 NodeWithScore(
-                    node=n, 
-                    score= self._simple_calculate_relevance(record, user_query)
+                    node=text_node, 
+                    score= self._simple_calculate_relevance(record, keywords)
                 )
-            )    
-            
-        ranked_nodes = sorted(
-            nodes,
-            key=lambda node: node.score or 0,
-            reverse=True
-        )
+            )
 
         # Step 4: Rerank the results using our reranking model
-        ranked_nodes = self._rerank_nodes(query_bundle, ranked_nodes)
+        ranked_nodes = self._rerank_nodes(query_bundle, nodes)
 
         return ranked_nodes
     
-    def _simple_calculate_relevance(self, node: dict, user_query: str) -> float:
+    def _simple_calculate_relevance(self, node: dict, keywords: list[str]) -> float:
         """
         Naive ranking according to if query text is contained in a result
         """
-        relevance = 0.0
+        relevance = 0.0        
+        
         for value in node.values():
-            if isinstance(value, str) and any(keyword.lower() in value.lower() for keyword in user_query.split()):
+            if isinstance(value, str) and any(keyword in value.lower() for keyword in keywords):
                 relevance += 1.0
 
         return relevance
@@ -125,5 +111,5 @@ class CustomNeo4jRetriever(BaseRetriever):
         """
         Rerank the retrieved nodes using our reranking model
         """
-        ranked = self._rerank_model._postprocess_nodes(nodes, query_bundle)
+        ranked = self._rerank_model.postprocess_nodes(nodes, query_bundle)
         return ranked
