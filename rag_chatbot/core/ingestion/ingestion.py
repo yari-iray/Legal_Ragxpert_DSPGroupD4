@@ -46,9 +46,11 @@ class LocalDataIngestion:
         )
         if embed_nodes:
             Settings.embed_model = embed_model or Settings.embed_model
+            
         for input_file in tqdm(input_files, desc="Ingesting data"):
             file_name = input_file.strip().split('/')[-1]
             self._ingested_file.append(file_name)
+            
             if file_name in self._node_store:
                 return_nodes.extend(self._node_store[file_name])
             else:
@@ -68,8 +70,10 @@ class LocalDataIngestion:
                 nodes = splitter([document], show_progress=True)
                 if embed_nodes:
                     nodes = Settings.embed_model(nodes, show_progress=True)
+                    
                 self._node_store[file_name] = nodes
                 return_nodes.extend(nodes)
+                
         return return_nodes
 
     def reset(self):

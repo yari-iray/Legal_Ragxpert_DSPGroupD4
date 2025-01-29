@@ -1,4 +1,5 @@
 
+import os
 import re
 from typing import Any, List
 import uuid
@@ -12,6 +13,7 @@ from llama_index.core import Settings
 from ...setting import RAGSettings
 from llama_index.graph_stores.neo4j import Neo4jGraphStore
 from llama_index.core.postprocessor import SentenceTransformerRerank
+from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 
 load_dotenv()
 
@@ -113,3 +115,36 @@ class CustomNeo4jRetriever(BaseRetriever):
         """
         ranked = self._rerank_model.postprocess_nodes(nodes, query_bundle)
         return ranked
+    
+    
+
+class UserNodesRetriever(BaseRetriever):
+    def __init__(self, setting: RAGSettings | None = None):
+        self._setting = setting or RAGSettings()
+        model_name = self._setting.ingestion.embed_llm
+        
+        self._rerank_model = SentenceTransformerRerank(
+            top_n=self._setting.retriever.top_k_rerank,
+            model=self._setting.retriever.rerank_llm,
+        )
+        
+        
+        
+        self._nodes: list[BaseNode] = []
+        
+        self._embed_model = HuggingFaceEmbedding(
+                model_name=model_name,
+
+                cache_folder=os.path.join(os.getcwd(), self._setting.ingestion.cache_folder),
+                trust_remote_code=True,
+                embed_batch_size=self._setting.ingestion.embed_batch_size
+            )
+        
+    def append_nodes(self, nodes: list[BaseNode]):
+        self._nodes.extend(nodes)
+        
+    
+        
+    def _retrieve(self, query_bundle: QueryBundle) -> List[NodeWithScore]:
+        return []
+        
