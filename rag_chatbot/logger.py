@@ -13,8 +13,11 @@ class Logger:
         self.flush()
 
     def write(self, message):
-        self.terminal.write(message)
-        self.log.write(message)
+        try:
+            self.terminal.write(message)
+            self.log.write(message)
+        except:
+            return
 
     def flush(self):
         self.terminal.flush()
