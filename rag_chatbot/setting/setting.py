@@ -31,7 +31,7 @@ class OllamaSettings(BaseModel):
         default=11434, description="Port number"
     )
     context_window: int = Field(
-        default=8000, description="Context window size"
+        default=10000, description="Context window size"
     )
     temperature: float = Field(
         default=0.1, description="Temperature"

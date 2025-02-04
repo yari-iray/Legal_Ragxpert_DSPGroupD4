@@ -1,0 +1,538 @@
+DURING HIS HIGHLY successful pleadings in the Barcelona Traction case,1
+Roberto Ago used a metaphor that would not be acceptable today. When he was referring to the Delagoa Bay case, he said that Delagoa was an old lady whose veil it was not advisable to lift.2 One could say that now Barcelona Traction has also become an old lady. The long time that has passed since the Court’s judgments, and my limited role in the pleadings, assisting Roberto Ago and Antonio Malintoppi, may allow me to revisit the case with the eyes of a scholar, in the context of the present study of landmark decisions on international law. Barcelona Traction was a holding company which controlled a number of companies producing electricity in Catalonia. It was declared bankrupt in 1948 by the Court of Reus, in Spain, because it had failed to pay interest on some bonds issued in sterling. The sum was a small amount of money and Barcelona Traction had not paid interest because the Spanish monetary authorities had refused to allow the company to export profits that it had made in Spain. As can happen in civil law countries, the bankruptcy judgment was given without hearing the company concerned,
+which could have subsequently filed an opposition with the same Court. However,
+Barcelona Traction did not make use of this remedy. The bankruptcy proceedings
+continued and Barcelona Traction lost control of its subsidiary companies. As a
+result of the bankruptcy, Barcelona Traction’s assets were transferred to a Spanish
+company, Fuerzas Eléctricas de Cataluña SA (FECSA). There was a suspicion that the Spanish authorities had contrived Barcelona Traction’s bankruptcy. The strong man in FECSA was Juan March. He was closely linked to General Francisco Franco, whom he had aided in the Spanish Civil War, especially by providing him with air transport from the Canary Islands at the begin-
+ning of the war.3 On the other hand, there was no evidence of corruption concerning the judge who had declared the bankruptcy. Also, the accounting firm Peat and
+Marwick found, on consultation by Spain, that the evaluation of Barcelona Traction’s
+assets in the bankruptcy proceedings had been fair.
+Belgium contended that various Spanish authorities had acted in breach of Spain’s
+obligations under international law and requested reparation. After years of diplomatic exchanges, which involved also Canada, the United Kingdom and the United
+States, Belgium made an application to the ICJ. The case concerned a huge sum of
+money and involved an unprecedented number of lawyers, some of them with the
+role of monitoring the work of other lawyers. The representatives of the private
+interests played an important part. The principal actors were FECSA on the Spanish
+side and SOFINA on the Belgian side. Belgium first applied to the ICJ on 23 September 1958. The claim concerned reparation for the injury caused to the company Barcelona Traction and was espoused by Belgium because of the alleged Belgian nationality of the shareholders of the
+company. Belgium filed a Memorial and Spain Preliminary Objections. The proceedings were discontinued by Belgium on 23 March 1961 pending negotiations for a settlement between representatives of the private interests. Spain declared that it did not object to the discontinuance of the proceedings and the Court recorded the discontinuance in an order of 10 April 1961. After the negotiations broke down, Belgium filed a new application on 19 June 1962, this time seeking reparation for the ‘damage suffered by Belgian nationals, individuals or legal persons, being shareholders of Barcelona Traction’.
+II. THE 1964 JUDGMENT ON PRELIMINARY OBJECTIONS
+With regard to this new claim, Spain raised four preliminary objections. The first
+one was that the discontinuance affected the admissibility of the new application.
+The discussion of this objection turned on whether there had been an understanding
+between the parties that discontinuance involved a final waiver. The Court rejected
+Spain’s objection mainly because it found that the various exchanges between the
+parties were ‘wholly inconclusive’6 and that one could not reasonably ‘suppose that
+on the eve of difficult negotiations, the success of which must be uncertain, there
+could have been any intention on the Belgian side to forgo the advantage represented
+by the possibility of renewed proceedings’.7
+The second preliminary objection concerned jurisdiction. A bilateral Treaty of
+1927 provided for compulsory adjudication of disputes, which had to be submit-
+ted to the PCIJ. Belgium maintained that the present Court’s jurisdiction rested on
+those treaty provisions and on Article 37 of the Court’s Statute, according to which
+‘Whenever a treaty or convention in force provides for reference of a matter … to
+the Permanent Court of Justice, the matter shall, as between the parties to the pre-
+sent Statute, be referred to the International Court of Justice’. Spain contended that
+there could not have been a transfer of jurisdiction from the Permanent Court to the
+present Court because Spain was not a party to the ICJ Statute when the Permanent
+Court was dissolved. The Court distinguished the interpretation of Article 37 from
+that which had been previously given to the transfer of jurisdiction based on declarations under the optional clause. It found that the dissolution of the PCIJ could not be ‘a cause of lapse or abrogation of any of the jurisdictional clauses concerned’8 and rejected the second preliminary objection.
+Spain’s third and fourth preliminary objections respectively concerned Belgium’s
+jus standi and the exhaustion of local remedies. They were both extensively dis-
+cussed but the Court joined them to the merits. Spain argued that Barcelona Traction
+had failed to exhaust local remedies mainly because it had omitted to use the remedy
+of opposition to the declaration of bankruptcy. According to the Court, this question
+was ‘inextricably interwoven with the issues of denial of justice which constitute the
+major part of the merits’.9
+The question of the exhaustion of local remedies was the object of further written
+and oral pleadings, but also in its 1970 judgment the Court did not find it necessary
+to examine it. This judgment was focused on the third preliminary objection, which
+led to the rejection of Belgium’s claim.
+III. THE 1970 JUDGMENT
+A. The Dicta on Obligations Erga Omnes
+The most famous passages in the 1970 judgment concern obligations erga omnes,
+defined as those for which ‘all States can be held to have a legal interest in their
+protection’.10 These passages have often been viewed as obiter dicta, since the Court
+distinguished obligations erga omnes from ‘those arising vis-à-vis another State
+in the field of diplomatic protection’ (ibid) and only the latter were considered by
+the Court to be at stake in Barcelona Traction. The Court said that ‘Obligations the
+performance of which is the subject of diplomatic protection are not of the same
+category’11 as obligations erga omnes. The Court could not have signalled more clearly
+that in referring to the latter obligations it was deviating from its course.
+The most likely reason for these obiter dicta, the drafting of which has been attrib-
+uted to Judge Lachs, was to send a signal to the international community that the
+Court was ready to take a different approach from the one followed in the South West Africa cases.12 The Court did not say that any state would have been entitled
+to invoke another state’s responsibility in case of breach of an obligation erga omnes,
+but this conclusion could be taken as implied.13 However, the implications of the
+existence of obligations erga omnes were outlined by the Court only some 40 years
+later, in its judgment in Questions relating to the Obligation to Prosecute or Extra-
+dite (Belgium v Senegal), when the ‘common interest in compliance with the relevant
+obligations under the Convention against Torture’ was said to imply that ‘any State
+party to the Convention may invoke the responsibility of another State party with
+a view to ascertaining the alleged failure to comply with its obligations erga omnes
+partes’.14
+In Barcelona Traction the Court named as examples of obligations erga omnes
+those resulting ‘from the outlawing of acts of aggression, and of genocide, as also
+from the principles and rules concerning the basic rights of the human person,
+including protection from slavery and racial discrimination’.15 The Court also speci-
+fied that, ‘With regard more particularly to human rights, to which reference has
+already been made in paragraph 34 of this Judgment, it should be noted that these
+also include protection against denial of justice’.16 However, the Court considered
+that protection against denial of justice as a human right applied only at a ‘regional
+level’ and moreover was not relevant in the case at hand, because Spain was then
+not a member of the Council of Europe and therefore not a party to the European
+Convention on Human Rights.17 Had the Court found that protection against denial
+of justice was a human right under customary international law, it would have had
+to consider the claim alleging a denial of justice irrespective of the nationality of the
+legal or natural persons concerned.
+In Barcelona Traction the Court did not consider the question whether diplomatic
+protection also covers claims for the breach of human rights. Only in Ahmadou Sadio
+Diallo (Republic of Guinea v Democratic Republic of the Congo) did the Court
+state that ‘the scope ratione materiae of diplomatic protection, originally limited to
+alleged violations of the minimum standard of treatment of aliens, has subsequently widened to include, inter alia, internationally guaranteed human rights’.18 This does
+not imply that, when a state is entitled to exercise diplomatic protection, other states
+cannot invoke responsibility for a breach of an obligation concerning human rights.
+The latter obligation retains its character of obligation erga omnes.
+B. The Distinction Between Rights of a Company and Rights of Its Shareholders
+The key question of international law that was before the Court in Barcelona
+Traction was whether the state of nationality of the shareholders of a company was
+entitled to exercise diplomatic protection on behalf of these shareholders in relation
+to the alleged breach of an obligation under international law that caused harm to
+the company, irrespective of the place of incorporation of the company or of the
+location of its siège social.
+
+
+Literature generally favoured the possibility of exercising diplomatic protection
+for the benefit of the shareholders, taking an approach that was sometimes termed
+substantive rather than formalistic, because it allowed the protection of the real
+interests at stake. The trend prevailing in bilateral investment treaties was to give
+protection to shareholders. The case law was less certain, although there were some
+indications that a claim could be preferred in favour of the shareholders if the harm
+was caused to a company having the nationality of the host state.
+Scholars generally expected the Court to contribute to modernising diplomatic
+protection by asserting that the state of nationality of the shareholders could exer-
+cise it in view of its economic interests. One commentator recalls that at a debate
+held at the American Society of International Law in 1969 ‘the eleven panelists …
+all anticipated, incorrectly, that the then-forthcoming Barcelona Traction Case
+would develop the law and allow a right of judicial intervention by the shareholder’s
+national state’.19
+The joining of the third preliminary objection to the merits could also have been
+taken as a sign that the Court was reluctant to conclude that only the state of nation-
+ality of the company was entitled under the circumstances to exercise diplomatic
+protection.
+Notwithstanding these expectations the Court upheld Spain’s third preliminary
+objection and ‘reject[ed] the Belgian Government’s claim’20 by an almost unanimous
+vote, with only the judge ad hoc selected by Belgium expressing his dissent.
+This outcome caused great surprise to both parties. It is true that the dispositif
+specified that ‘twelve votes of the majority [were] based on the reasons set out in the
+present Judgment’.21 This leaves out the position of three judges holding different
+views from those expressed by the majority. They may be identified as Judges Tanaka,
+Jessup and Gros, each of whom appended a lengthy separate opinion. Moreover, a
+long separate opinion was contributed also by Judge Fitzmaurice, who pointed to
+the possible ‘recognition of Belgian capacity to claim on behalf of any person or
+entity who, at the material times, was both of Belgian nationality and a shareholder
+in the Barcelona company’.22 Judge Tanaka concluded on this point that ‘Belgium
+ha[d] an independent right to protect the Belgian shareholders in Barcelona Traction
+in conformity with the interpretation of customary international law concerning
+the diplomatic protection of nationals’.23 Judge Jessup defended inter alia the ‘pri-
+macy of the general economic interest of the State in protecting private investments
+abroad’.24 Also according to Judge Gros, what was relevant was whether an invest-
+ment was ‘connected with a particular national economy’.25 The reason why Judges
+Gros and Jessup voted in favour of the rejection of the Belgian claim related to what
+they considered an insufficiency of evidence concerning the Belgian nationality of
+Barcelona Traction’s shareholders.26
+The main separate opinions were much appreciated in the subsequent litera-
+ture, which prevailingly found the line of argument reflecting the majority view
+disappointing.27
+For the majority of the Court, the key element was the distinction between the
+rights of a company and those of its shareholders. For the purpose of diplomatic
+protection,
+international law has had to recognize the corporate entity as an institution created by
+States in a domain essentially within their domestic jurisdiction. This in turn requires that,
+whenever legal issues arise concerning the rights of States with regard to the treatment of
+companies and shareholders, as to which rights international law has not established its
+own rules, it has to refer to the relevant rules of municipal law.28
+The Court noted that ‘The concept and structure of the company are founded on
+and determined by a firm distinction between the separate entity of the company and
+that of the shareholder, each with a distinct set of rights’.29 This point was decisive because ‘Not a mere interest affected, but solely a right infringed involves responsibil-
+ity, so that an act directed against and infringing only the company’s rights does not
+involve responsibility towards the shareholders, even if their interests are affected’.30
+The Court gave as examples of rights of shareholders, which were considered ‘dis-
+tinct from those of the company’, the following: ‘the right to any declared dividend,
+the right to attend and vote at general meetings, the right to share in the residual
+assets of the company on liquidation’.31 None of these rights concerned ‘difficulties
+or financial losses to which [the shareholders] may be exposed as the result of the
+situation of the company’.32
+The distinction between rights of shareholders and their interests is not always
+outlined in municipal law in a way that would justify the significant consequences
+that follow according to the Court.33 The use of the term ‘interests’ instead of ‘rights’
+does not necessarily signify a different legal situation. Reference is often made to
+‘rights and interests’ without a clear dividing line.
+The Court did not focus on any particular system of municipal law. It referred to
+‘rules generally accepted by municipal legal systems’34 and held that, in making such
+a reference, ‘the Court cannot modify, still less deform’ rules of municipal law.35
+While there may be a convergence among many systems of municipal law on
+identifying the entitlements of shareholders, shareholders’ rights are not necessar-
+ily identical under the different laws. It may be questionable why the Court did not
+identify the relevant system of municipal law under which one should determine
+which rights pertain to a shareholder.36 Similar criticism may be addressed to the
+Court’s failure in the same context to identify the system under which the rights of a
+company are established. There may also conceivably be instances where the rights
+of shareholders overlap with those of their company.37
+The Court’s reluctance to specify which law applies may reflect a more general
+attitude of reluctance to address issues of conflict of laws and to go into the details
+of the municipal law held to be applicable. However, a more detailed analysis of
+the issues of municipal law appears to be often a necessary step towards a deci-
+sion concerning diplomatic protection. For instance, how could the Court assess that a certain expropriation is unlawful, without first ascertaining which is the law
+applicable to the ownership of the property concerned and then applying that law
+to the case at hand?
+It is noteworthy that, in reaching its conclusion under customary international
+law, the Court relied on general statements concerning the nature of the claims that
+a state may put forward on behalf of a company or its shareholders when harm is
+caused to the company. It did not refer to state practice or even mention the various
+arbitral decisions which had been extensively discussed by the parties.38 The Court
+noted only that:
+in most cases the decisions cited rested upon the terms of instruments establishing the
+jurisdiction of the tribunal or claims commission and determining what rights might enjoy
+protection; they cannot therefore give rise to generalization going beyond the special cir-
+cumstances of each case.39
+With regard to the protection of shareholders, the Court even referred to ‘the silence
+of international law’.40
+One of the arguments developed by the Court for justifying its conclusion was
+based on the observation that shareholders could have many different nationalities,
+possibly each with few shares. According to the Court, ‘the adoption of the theory
+of diplomatic protection of shareholders as such, by opening the door to competing
+diplomatic claims, could create an atmosphere of confusion and insecurity in inter-
+national economic relations’.41 Judge Fitzmaurice observed in his separate opinion
+that this objection ‘would only go to the quantum of reparation recoverable by the
+various governments’.42 It cannot in fact be a decisive objection and was not offered
+by the Court as such. However, given that transfers of shares occur frequently and
+without any publicity, it would often be problematic to determine who the share-
+holders of a company are at any given time. The host state would have to face
+claims under international law with regard to harm caused to a local company even
+if that state was unaware of the presence of foreign shareholders when the harm
+occurred.
+
+
+The approach taken by the Court in Barcelona Traction with regard to the protec-
+tion of shareholders in relation to harm caused to a company has not been followed
+by the Chamber that decided the case of Elettronica Sicula SpA (ELSI) (United
+States of America v Italy). The United States exercised diplomatic protection on
+behalf of two United States corporations which owned the totality of the shares of a
+company constituted under Italian law in relation to harm caused to that company.
+The claims rested on a bilateral Treaty of Friendship, Commerce and Navigation
+(FCN). Italy gave a more restrictive interpretation to the relevant treaty clauses.
+All the issues raised in the ELSI case were examined only on the basis of the FCN
+Treaty. In view of the facts, the Chamber always concluded that a choice between the
+opposing readings of the relevant treaty provisions was not called for.
+In order to illustrate the Chamber’s approach, it may be sufficient to refer to what
+the Chamber said with regard to two treaty provisions. With regard to the taking
+of property, the Chamber considered whether the United States could bring a claim
+on behalf of the shareholders of a company the property of which had been taken.
+The Chamber quoted the first paragraph of the Protocol to the FCN Treaty, which
+reads as follows:
+The provisions of paragraph 2 of Article V [of the FCN Treaty], providing for the payment
+of compensation, shall extend to interests held directly or indirectly … by nationals, corpo-
+rations and associations of either High Contracting Party in property which is taken within
+the territories of the other High Contracting Party.
+The Chamber observed that ‘the English text of this provision suggests that it was
+designed precisely to resolve the doubts just described’. It recalled that Italy had sug-
+gested that the Italian text, which is also authoritative, had a narrower meaning, but
+did not find it necessary to dwell on this question of interpretation given the facts
+to which the quoted provision had to be applied.43 One can see that the Chamber
+rather favoured a reading of the treaty provision which would allow the exercise of
+diplomatic protection of the shareholders for the harm indirectly suffered, when the
+property of their company has been taken.
+A similar approach was taken by the Chamber with regard to Article VII of the
+FCN Treaty. According to its English text, this provision conferred on nationals of
+the parties the right ‘to acquire, own and dispose of immovable property or inter-
+ests therein’. The United States contended that the phrase was ‘sufficiently broad to
+include indirect ownership of property rights held through a subsidiary that is not
+a United States corporation’. Italy relied on the Italian text of the provision, which
+referred to ‘diritti reali’ instead of ‘interessi (interests)’. The Chamber expressed
+‘some sympathy with the contention of the United States, as being more in accord
+with the general purpose of the FCN Treaty’.44 However, the Chamber concluded
+that no breach of this treaty provision had occurred.45
+In ELSI the Chamber could not take a decision on the protection of the two
+United States companies under customary international law, because this would
+have been outside the Court’s jurisdiction.46 However, the Chamber would not have
+been prevented from examining the treaty provisions in the context of customary
+rules. It could then have incidentally reconsidered the approach taken in Barcelona
+Traction with regard to the protection of shareholders, but this was probably viewed
+as a task that would have been more appropriate for the full Court.
+The relevance of the distinction between conduct affecting the direct rights of
+shareholders and conduct affecting the rights of the company was endorsed by the
+ILC in Article 12 of its draft articles on Diplomatic Protection. The Commission
+expressed the following rule:
+To the extent that an internationally wrongful act of a State causes direct injury to the
+rights of shareholders as such, as distinct from those of the corporation itself, the State of
+nationality of any such shareholders is entitled to exercise diplomatic protection in respect
+of its nationals.47
+This rule has to be read in the context of another rule contained in the draft articles
+which, as we shall see,48 tends to widen the protection of shareholders for harm
+caused to their company.
+The Court addressed again the question of the protection of shareholders from
+the viewpoint of customary international law in Ahmadou Sadio Diallo (Republic of
+Guinea v Democratic Republic of the Congo). The case concerned harm caused to
+Africom-Zaire and Africontainers-Zaire, two companies (sociétés privées à respon-
+sabilité limitée, SPRL) incorporated in the Democratic Republic of the Congo, and
+its legal consequences for Mr Diallo, an ‘associé’ of those companies.
+In the proceedings relating to preliminary objections, Guinea argued that ‘the
+direct rights of Mr Diallo as a shareholder of Africom-Zaire and Africontainers-
+Zaire’ had been affected, in particular his ‘right to control, supervise and manage
+the companies’.49 In their pleadings, the Parties frequently referred to the Barcelona
+Traction judgment.50 According to the Court:
+Conferring independent corporate personality on a company implies granting it rights over
+its own property, rights which it alone is capable of protecting. As a result, only the State
+of nationality may exercise diplomatic protection on behalf of the company when its rights
+are injured by a wrongful act of another State. In determining whether a company pos-
+sesses independent and distinct legal personality, international law looks to the rules of the
+relevant domestic law.51
+The Court referred to ‘the domestic law of the Democratic Republic of the Congo’
+for establishing ‘the precise legal nature’ of the two companies involved52 and con-
+cluded on this point:
+what amounts to the internationally wrongful act, in the case of associés or shareholders, is
+the violation by the respondent State of their direct rights that are defined by the domestic
+law of that State, as accepted by both Parties, moreover.
+The dispositif stated that Guinea’s application was admissible ‘in so far as it
+concern[ed] protection of Mr. Diallo’s direct rights as associé in the State of incorpo-
+ration of the companies’.54
+The Court considered that the judgment on preliminary objections was not the
+stage of the proceedings at which it had to determine ‘which specific rights apper-
+tain to the status of associé and which to the position of gérant of an SPRL under
+Congolese law’.55 This was left to a later decision, to be given following pleadings
+on the merits.
+
+
+In its judgment on the merits, the Court quoted para 38 of the Barcelona Traction
+judgment56 and then proceeded to identify more specifically Mr Diallo’s direct rights
+as associé of the two companies under the law of the Democratic Republic of the
+Congo.57 The Court examined whether any of these rights had been infringed.
+In particular, with regard to property, the Court observed that:
+international law has repeatedly acknowledged the principle of domestic law that a com-
+pany has a legal personality distinct from that of the shareholders. This remains true even
+in a case of a SPRL which may have become unipersonal in the present case. Therefore,
+the rights and assets of a company must be distinguished from the rights and assets of an
+associé.58
+In sum, the Court followed the same approach taken in Barcelona Traction,59 but,
+rather than referring to principles held to be common to municipal laws, applied
+the law of the state of incorporation of the companies in order to identify the ‘direct
+rights’ of associés or shareholders.
+C. The Determination of the Nationality of the Company
+It has already been noted that the Court in Barcelona Traction, when it was discuss-
+ing the distinction between the rights of shareholders and those of their company,
+did not consider it necessary to specify under which municipal law these rights had
+to be determined. The judgment contains, however, some remarks on the nationality
+of corporations and gives an indication that in the Court’s view Barcelona Traction
+had Canadian nationality.
+The declared purpose of that analysis was to consider the consequences ‘of the
+lack of capacity of the company’s national State to act on its behalf’.60 Leaving
+those consequences aside for the moment, let us consider the criteria that the Court used for defining the nationality of the company for the purpose of the exercise of
+diplomatic protection on its behalf by the state of nationality.
+The Court first stated what it defined as a ‘traditional rule’, which ‘attributes the
+right of diplomatic protection of a corporate entity to the State under the laws of
+which it is incorporated and in whose territory it has its registered office’.61 However,
+the Court also noted that ‘it has been the practice of some States to give a company
+incorporated under their law diplomatic protection solely when it has its seat (siège
+social) or management or centre of control in their territory’.62 Given that incorpo-
+ration is mentioned again in this passage, the location of the seat or management or
+centre of control seems to be an additional requirement. Within the limits outlined in
+the passages quoted above, the Court seems to leave it within each state’s discretion
+to establish the criteria which are relevant for exercising diplomatic protection on
+behalf of a company. However, this would run counter to the practice of those states
+which consider the siège social rather than incorporation the decisive criterion for
+attributing nationality.
+For the purposes of the Barcelona Traction case, the Court did not find it
+necessary to discuss further this issue. The Court noted that it was ‘not disputed
+that the company was incorporated in Canada and ha[d] its registered office in that
+country’.63 Thus Barcelona Traction had to be considered a Canadian company
+under what the Court had called a ‘traditional rule’. The Court assumed that no
+further requirements were set forth under Canadian law.
+The Nottebohm judgment had raised the question whether the nationality of an
+individual on behalf of whom a state exercised its diplomatic protection could be
+regarded as sufficient or whether some kind of genuine connection was required.
+The applicability of a similar approach to the diplomatic protection of companies
+gave rise to ample discussion in the pleadings, with Belgium contesting the existence
+of a genuine connection between Canada and the Barcelona Traction.
+The Court briefly addressed the issue. It observed that ‘in the particular field of the
+diplomatic protection of corporate entities, no absolute test of the “genuine connec-
+tion” has found general acceptance’. The Court referred to the Nottebohm case and
+said that ‘given both the legal and factual aspects of protection in the present case
+the Court is of the opinion that there can be no analogy with the issues raised or the
+decision given in that case’.64
+With these brief remarks, the Court did not reject the idea that a State, in order
+to exercise diplomatic protection on behalf of a company having its nationality,
+should have a genuine connection with the company which would make nationality
+effective. However, the Court did not specify what kind of links would be required, because it considered that, in any event, those links existed between Canada and
+Barcelona Traction. Apart from Canada being the country of incorporation and
+that where the company’s ‘registered office, its accounts and its share registers’ were
+located, the Court also referred to Canada as the place where ‘board meetings were
+held … for many years’66 and to the fact of the listing of the company ‘in the records
+of the Canadian tax authorities’. The Court concluded on this point:
+Thus a close and permanent connection has been established, fortified by the passage of
+over half a century. This connection is in no way weakened by the fact that the company
+engaged from the very outset in commercial activities outside Canada, for this was its
+declared object. Barcelona Traction’s links with Canada are thus manifold.67
+The Court did not give any weight, for establishing the existence of a genuine connection, to the nationality of shareholders. Nor did the Court consider the links of
+the company with the host state, the weight of which had been decisive for the con-
+clusion reached in Nottebohm.68
+Given that, according to the Court, there existed a genuine connection between
+Canada and Barcelona Traction, there was no need for the Court to dwell on the
+consequences of the disqualification of a state from exercising diplomatic protection
+because of the absence of those links.
+The International Law Commission also did not address this question in its draft
+articles on Diplomatic Protection, but for the different reason that the Commis-
+sion did not endorse the requirement of a genuine connection for the exercise of
+diplomatic protection, whether on behalf of a natural or of a legal person. Partly
+following the view expressed by Judge Jessup in his separate opinion, the Com-
+mission stated a criterion of nationality based on the nationality of the controlling
+shareholders. When certain conditions are fulfilled, this replaces the general crite-
+rion based on the law under which the company was incorporated.69 According to
+Article 9 of the draft articles,
+when the corporation is controlled by nationals of another State or States and has no sub-
+stantial business activities in the State of incorporation, and the seat of management and
+the financial control of the corporation are both located in another State, that State shall be
+regarded as the State of nationality.
+D. The Possible Exceptions Allowing for the Protection of Shareholders
+In Barcelona Traction the Court discussed whether there were some exceptional
+cases that would allow a state to exercise diplomatic protection on behalf of its
+nationals who are shareholders of a foreign company for harm caused to the com-
+pany. The Court noted that, from this perspective, ‘protection by the national State
+of the shareholders can hardly be graduated according to the absolute or relative size
+of the shareholding involved’.70 The assertion of these exceptions is not in harmony
+with the general approach taken by the Court to the effect that diplomatic protec-
+tion of the shareholders may concern only their rights.71
+The Court did not find it necessary to take a position on any of these excep-
+tions because they were considered inapplicable to the case at hand. However, the
+attitude of the Court appears to be somewhat favourable to the existence of some
+exceptions extending the protection of shareholders. 
+
+
+This is reflected in the general
+statement that:
+The process of lifting the veil, being an exceptional one admitted by municipal law in
+respect of an institution of its own making, is equally admissible to play a similar role in
+international law. It follows that on the international plane also there may in principle be
+special circumstances which justify the lifting of the veil in the interest of shareholders.72
+Considering the issue on the basis of equity, the Court referred to ‘a theory …
+developed to the effect that the State of the shareholders has a right of diplomatic
+protection when the State whose responsibility is invoked is the national State of the
+company’.73 This exception is intended to provide some protection under interna-
+tional law to foreign investments when they take the form of shares in a company
+having the nationality of the host state. It is reflected in a wide number of treaty
+provisions and has found acceptance in some arbitral decisions, to none of which
+the Court specifically referred.
+In Article 11 of its draft articles on Diplomatic Protection, the ILC expressed
+the opinion that the state of nationality of shareholders in a corporation would be
+entitled to exercise diplomatic protection if ‘(b) the corporation had, at the date of
+injury, the nationality of the State alleged to be responsible for causing the injury,
+and incorporation in that State was required by it as a precondition for doing busi-
+ness there’.74 This exception is based on the assumption that, when the host state
+requires the establishment of a local company, it does so in order to diminish the risk
+that diplomatic protection be exercised or that the investors resort to international
+arbitration. The requirement bears similarities with the Calvo clause.75
+The scope of this exception was discussed in the Diallo case. Guinea had invoked
+the possibility of exercising diplomatic protection ‘by substitution’. According to
+Guinea, ‘the shareholders of a company can enjoy the diplomatic protection of their
+own national State as regards the national State of the company when the State is
+responsible for an internationally wrongful act against it’.76 The Court stated that,
+having carefully examined State practice and decisions of international courts and tribunals
+in respect of diplomatic protection of associés and shareholders, it [was] of the opinion that these do not reveal—at least at the present time—an exception in customary international
+law allowing for protection by substitution, such as is relied on by Guinea.77
+The Court did not produce any analysis of state practice or of judicial or arbitral
+decisions, except for observing that ‘The arbitrations relied on by Guinea are …
+special cases, whether based on specific international agreements between two or
+more States, including the one responsible for the allegedly unlawful acts regarding
+the companies concerned … or based on agreements concluded directly between a
+company and the State allegedly responsible for the prejudice to it.78
+The Court then noted that ‘It is a separate question whether customary interna-
+tional law contains a more limited rule of protection by substitution, such as that set
+out by the ILC in its draft Articles on Diplomatic Protection …’.79 The Court referred
+to Article 11(b), quoted above. The Court did not find it necessary to address this
+question, since ‘the companies, Africom-Zaire and Africontainers-Zaire, were not
+incorporated in such a way that they would fall within the scope of protection by
+substitution in the sense of Article 11, paragraph (b), of the ILC draft Articles’.80
+Another exception envisaged by the Court in Barcelona Traction concerns the
+case of the company having ceased to exist.81 According to the Court:
+Only in the event of the legal demise of the company are the shareholders deprived of the
+possibility of a remedy available through the company; it is only if they became deprived
+of all such possibility that an independent right of action for them and their government
+could arise.82
+The Court did not dwell on the issue whether in the case of a legal demise of the
+company, the state of nationality of the shareholders was entitled to protect them in
+relation to harm caused to the company, because it found that Barcelona Traction
+was ‘in receivership in the country of incorporation’ but ‘continue[d] to exist’.83
+Article 11(a) of the draft articles of the International Law Commission on Diplo-
+matic Protection considers that the state of nationality of shareholders is ‘entitled to
+exercise diplomatic protection in respect of such shareholders in the case of an injury
+to the corporation’ when ‘the corporation has ceased to exist according to the law of
+the State of incorporation for a reason unrelated to the injury’.84
+This provision was not examined in the Diallo case, because it was clearly not
+relevant.
+In Barcelona Traction the Court referred as a possible exception also to ‘the lack
+of capacity of the company’s national State to act on its behalf’.85 The scope of this
+exception and its consequences were not clearly spelled out. What seems implied in
+this reference is that if the state of nationality of the company was not entitled to
+exercise diplomatic protection towards the host state, for instance because of the lack of a genuine connection with the company, the state of nationality of the share-
+holders would be able to protect them in relation to a harm indirectly caused to them.
+The Court did not find it necessary to analyse the exception any further. It con-
+cluded on this point that
+the record shows that, from 1948 onwards the Canadian Government made to the Spanish
+Government numerous representations which cannot be viewed otherwise than as the exer-
+cise of diplomatic protection in respect of the Barcelona Traction company. Therefore this
+was not a case where diplomatic protection was refused or remained in the sphere of fiction.86
+E. The Exercise of Diplomatic Protection
+After examining the preconditions for the exercise of diplomatic protection with
+regard to a company and to its shareholders, the Court considered the role of the
+state in that exercise. The apparent purpose of this analysis was to make it clear that
+Barcelona Traction had not been deprived of the possibility that its state of national-
+ity exercised diplomatic protection.
+The Court observed that, ‘within the limits prescribed by international law, a State
+may exercise diplomatic protection by whatever means and to whatever extent it
+thinks fit, for it is its own right that the State is asserting’.87 The Court thus held that
+a state’s exercise of diplomatic protection is an exercise of its own right. This means
+that the state enjoys discretion in deciding whether or not to exercise diplomatic
+protection and, when it is exercised, whether to discontinue it. The Court said:
+The State must be viewed as the sole judge to decide whether its protection will be granted,
+to what extent it is granted, and when it will cease. It retains in this respect a discretionary
+power the exercise of which may be determined by considerations of a political or other
+nature, unrelated to the particular case.88
+These passages implicitly endorse the definition of diplomatic protection that the
+PCIJ had famously expressed in the Mavrommatis case.89 A different definition,
+which seeks to enhance the position of the individual or entity for whose benefit the
+diplomatic protection is exercised, was given by the Court in Diallo. 
+
+
+The Court then noted that:
+under customary international law, as reflected in Article 1 of the draft Articles on
+Diplomatic Protection of the International Law Commission … ‘diplomatic protection
+consists of the invocation by a State, through diplomatic action or other means of dispute
+settlement, of the responsibility of another State for an injury caused by an internationally
+wrongful act of that State to a natural or legal person that is a national of the former State
+with a view to the implementation of such responsibility’. This definition considers that the relevant injury is that caused to the natural or
+legal person. Moreover, it does not enunciate that the exercise of diplomatic protec-
+tion is a right of the state. However, also according to the draft articles on Diplo-
+matic Protection, the state of nationality has discretion whether or not to exercise
+diplomatic protection. Article 2 sets forth that state’s ‘right to exercise diplomatic
+protection’,91 which implies discretion, subject only to the recommendation set
+forth in Article 19.92
+The Court noted that the Canadian Government had exercised diplomatic protec-
+tion on behalf of Barcelona Traction93 and that ‘the Spanish Government ha[d] not
+questioned Canada’s right to protect the company’.94 In his separate opinion Judge
+Fitzmaurice did not find that a conclusion that Spain was precluded from raising
+the question of Canada’s jus standi would have been ‘self-evidently well-founded’.
+This because ‘diplomatic representations—which need not necessarily be based on
+or imply a claim of right, but are often admitted or received in the absence of any
+such claim or pretension to it—belong to a different order of international act from
+the presentation of a formal claim before an international tribunal’.95 It is reason-
+able to consider that the preclusion of a host state from raising an objection to jus
+standi may depend on the nature of the claims previously addressed to that state.
+However, preclusion could rest also on the fact that, as the Court observed, ‘The
+Spanish Government … never challenged the Canadian nationality of the company,
+either in the diplomatic correspondence with the Canadian Government or before
+the Court’ and ‘unreservedly recognized Canada as the national State of Barcelona
+Traction in both written pleadings and oral statements made in the course’ of the
+judicial proceedings.[96]
+IV. CONCLUSION
+Already at the time when the Barcelona Traction judgments were delivered, the
+importance of the entitlement under customary international law to exercise diplomatic protection on behalf of a company or of its shareholders was limited by the presence of many international agreements for the protection of foreign investments. These have in the meantime multiplied and, as the Court observed in Diallo, ‘the role of diplomatic protection somewhat faded, as in practice recourse is only made to it in rare cases where treaty régimes do not exist or have proved inoperative’.[97] Customary international law on diplomatic protection could have developed following the prevailing trends in investment agreements. This has occurred according to some authors,98 but not in the opinion of others [99] or of the Court, which followed in Diallo an approach consistent with that adopted in Barcelona Traction. One element that has limited the impact of investment treaties on customary international law is the great variety of treaty provisions concerning investments in the form of shares in a foreign company [100]. Other factors are the attitudes of states where the investment takes place, which do not favour extending the protection of foreign investments, and also the policy of some major investor states, which are reluctant to let other states reap the benefits of the regime consigned in the investment treaties that the former states concluded.
