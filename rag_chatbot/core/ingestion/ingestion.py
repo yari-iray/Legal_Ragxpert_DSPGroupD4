@@ -10,6 +10,57 @@ from ...setting import RAGSettings
 
 load_dotenv()
 
+FLINT_RELATION_TYPES = {
+    # Structural Relationships
+    "hasPart": {
+        "domain": ["Act", "ComplexFact"],
+        "range": ["Fact", "Act"],
+        "patterns": ["consists of", "contains", "comprises"]
+    },
+    
+    # Causal Relationships
+    "creates": {
+        "domain": ["Act"],
+        "range": ["Fact"],
+        "patterns": ["establishes", "grants", "provides"]
+    },
+    "terminates": {
+        "domain": ["Act"],
+        "range": ["Fact"],
+        "patterns": ["abolishes", "revokes", "ends"]
+    },
+    
+    # Agency Relationships
+    "hasActor": {
+        "domain": ["Act"],
+        "range": ["Agent"],
+        "patterns": ["by", "performed by", "through"]
+    },
+    "hasRecipient": {
+        "domain": ["Act"],
+        "range": ["Agent"],
+        "patterns": ["to", "for", "towards"]
+    },
+    
+    # Logical Relationships
+    "hasPrecondition": {
+        "domain": ["Act"],
+        "range": ["BooleanFact"],
+        "patterns": ["if", "when", "provided that"]
+    },
+    "hasPostcondition": {
+        "domain": ["Act"],
+        "range": ["Fact"],
+        "patterns": ["resulting in", "thereby", "consequently"]
+    },
+    
+    # Default Fallback
+    "relatedTo": {
+        "domain": ["*"],
+        "range": ["*"],
+        "patterns": []
+    }
+}
 
 class LocalDataIngestion:
     def __init__(self, setting: RAGSettings | None = None) -> None:
