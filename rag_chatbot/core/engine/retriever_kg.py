@@ -14,6 +14,7 @@ from ...setting import RAGSettings
 from llama_index.graph_stores.neo4j import Neo4jGraphStore
 from llama_index.core.postprocessor import SentenceTransformerRerank
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
+from llama_index.core.memory import ChatMemoryBuffer
 
 load_dotenv()
 
@@ -32,7 +33,7 @@ class _Connectivity:
         return result
 
 class CustomNeo4jRetriever(BaseRetriever):
-    def __init__(self, graph_store: Neo4jGraphStore, llm: LLM | None = None, setting: RAGSettings | None = None):
+    def __init__(self, graph_store: Neo4jGraphStore, llm: LLM | None = None, setting: RAGSettings | None = None, memory: ChatMemoryBuffer | None = None):
         self._setting = setting or RAGSettings()
         self._rerank_model = SentenceTransformerRerank(
             top_n=self._setting.retriever.top_k_rerank,
@@ -42,6 +43,7 @@ class CustomNeo4jRetriever(BaseRetriever):
         self._graph_store = graph_store
         self._metadata = _Connectivity.get_metadata(self._graph_store)
         self._llm = llm or Settings.llm
+        self.memory = memory
         
         assert self._llm is not None
 
@@ -95,14 +97,16 @@ class CustomNeo4jRetriever(BaseRetriever):
         """
         Use the LLM to convert a natural language query into a Cypher query.
         """
+        
         cypher_generation_prompt = f"""
-        You are a helpful assistant that converts natural language queries into Cypher queries for a Neo4j graph database.
+        You are a helpful assistant that converts natural language queries into complex legal Cypher queries for a Neo4j graph database.
+        The 
         The graph contains nodes with properties like `name`, `description`, and `type`.
         
         The neo4j graph contains the following node labels and properties:
         {self._metadata}
         
-        Convert the following natural language query into a Cypher query:
+        Convert the following natural language query into a Cypher query:        
         "{query}"
         Return only the Cypher query.
         """
@@ -115,36 +119,3 @@ class CustomNeo4jRetriever(BaseRetriever):
         """
         ranked = self._rerank_model.postprocess_nodes(nodes, query_bundle)
         return ranked
-    
-    
-
-class UserNodesRetriever(BaseRetriever):
-    def __init__(self, setting: RAGSettings | None = None):
-        self._setting = setting or RAGSettings()
-        model_name = self._setting.ingestion.embed_llm
-        
-        self._rerank_model = SentenceTransformerRerank(
-            top_n=self._setting.retriever.top_k_rerank,
-            model=self._setting.retriever.rerank_llm,
-        )
-        
-        
-        
-        self._nodes: list[BaseNode] = []
-        
-        self._embed_model = HuggingFaceEmbedding(
-                model_name=model_name,
-
-                cache_folder=os.path.join(os.getcwd(), self._setting.ingestion.cache_folder),
-                trust_remote_code=True,
-                embed_batch_size=self._setting.ingestion.embed_batch_size
-            )
-        
-    def append_nodes(self, nodes: list[BaseNode]):
-        self._nodes.extend(nodes)
-        
-    
-        
-    def _retrieve(self, query_bundle: QueryBundle) -> List[NodeWithScore]:
-        return []
-        

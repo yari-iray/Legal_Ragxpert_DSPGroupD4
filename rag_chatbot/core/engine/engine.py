@@ -3,7 +3,7 @@ from llama_index.core.memory import ChatMemoryBuffer
 from llama_index.core.llms.llm import LLM
 from llama_index.core.schema import BaseNode
 from typing import List
-from .retriever import LocalRetrieverProvider
+from .provider import LocalRetrieverProvider
 from ...setting import RAGSettings
 
 
@@ -34,13 +34,15 @@ class LocalChatEngine:
 
         elif mode == "kg":
             # Chat engine with documents
+            mem = ChatMemoryBuffer(
+                    token_limit=self._setting.ollama.chat_token_limit
+                )
+            
             retriever = self._retrieverprovider.get_retriever(llm=llm)
             return CondensePlusContextChatEngine.from_defaults(
                 retriever=retriever,
                 llm=llm,
-                memory=ChatMemoryBuffer(
-                    token_limit=self._setting.ollama.chat_token_limit
-                )
+                memory=mem
             )
             
         raise NotImplementedError()
