@@ -72,7 +72,7 @@ class Neo4jSettings(BaseModel):
         default="bolt://localhost:7687", description="URL for Neo4j db instance"
     )
     database: str = Field(
-        default="versioneight", description="Database to use for Neo4j db instance"
+        default="RagChatbot", description="Database to use for Neo4j db instance"
     )
 
 class IngestionSettings(BaseModel):

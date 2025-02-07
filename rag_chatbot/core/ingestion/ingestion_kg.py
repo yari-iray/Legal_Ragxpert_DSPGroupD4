@@ -1,16 +1,8 @@
-import PyPDF2
 from dotenv import load_dotenv
 from tqdm import tqdm
-import matplotlib.pyplot as plt
-from spacy.tokens import Doc
-from typing import Dict, List, Tuple, Set, Any
-from collections import defaultdict
 import logging
 import re
 import fitz
-from llama_index.core.schema import BaseNode
-from llama_index.core import Document, Settings
-from llama_index.core.node_parser import SentenceSplitter
 from ...setting import RAGSettings
 from rdflib_neo4j import Neo4jStoreConfig, Neo4jStore, HANDLE_VOCAB_URI_STRATEGY
 from rdflib import Graph
@@ -89,3 +81,9 @@ class KgDataIngestion:
 
     def reset(self) -> None:
         return
+    
+
+if __name__ == "__main__":
+    FILE_NAME = "YOUR_FILE_NAME_HERE.ttl"
+    ingester = KgDataIngestion()
+    ingester.add_to_neo4j_db(FILE_NAME)
