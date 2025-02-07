@@ -1,4 +1,5 @@
 import PyPDF2
+from dotenv import load_dotenv
 from tqdm import tqdm
 import matplotlib.pyplot as plt
 from spacy.tokens import Doc
@@ -13,10 +14,11 @@ from llama_index.core.node_parser import SentenceSplitter
 from ...setting import RAGSettings
 from rdflib_neo4j import Neo4jStoreConfig, Neo4jStore, HANDLE_VOCAB_URI_STRATEGY
 from rdflib import Graph
-from setting.setting import RAGSettings
-from core.ingestion.kg_builder import LLMKnowledgeGraphBuilder
+from .kg_builder import LLMKnowledgeGraphBuilder
 
-class DocumentAnalyzer:
+load_dotenv()
+
+class KgDataIngestion:
     def __init__(self, setting: RAGSettings | None = None):
         self._setting = setting or RAGSettings()        
         self.logger = logging.Logger("doc-analyzer")
@@ -67,7 +69,7 @@ class DocumentAnalyzer:
             if file_name in self._stored_filenames:
                 continue
             
-            document = fitz.open(input_file)
+            document = fitz.Document(input_file)
             text_per_page = []
             for _, page in enumerate(document):
                 page_text = page.get_text("text")
@@ -82,4 +84,8 @@ class DocumentAnalyzer:
             result_file_content = self.kg_builder.build(file_name, file_content)
             self.add_to_neo4j_db(result_file_content)
             
-        
+    def check_nodes_exist(self) -> bool:
+        return True
+
+    def reset(self) -> None:
+        return

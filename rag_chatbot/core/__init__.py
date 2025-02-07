@@ -1,6 +1,6 @@
 from .embedding import LocalEmbedding
 from .model import LocalKgModels
-from .ingestion import LocalDataIngestion
+from .ingestion import LocalDataIngestion, KgDataIngestion
 from .engine import LocalChatEngine
 from .prompt import get_system_prompt
 
@@ -9,5 +9,6 @@ __all__ = [
     "LocalKgModels",
     "LocalDataIngestion",
     "LocalChatEngine",
-    "get_system_prompt"
+    "get_system_prompt",
+    "KgDataIngestion"
 ]

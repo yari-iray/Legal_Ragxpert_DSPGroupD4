@@ -1,12 +1,13 @@
 from .core import (
     LocalChatEngine,
     LocalDataIngestion,
+    KgDataIngestion,
     LocalKgModels,
     LocalEmbedding,
     get_system_prompt,
 )
 from llama_index.core import Settings
-from llama_index.core.chat_engine.types import StreamingAgentChatResponse
+from llama_index.core.chat_engine.types import StreamingAgentChatResponse, BaseChatEngine
 from llama_index.core.prompts import ChatMessage, MessageRole
 
 
@@ -19,8 +20,8 @@ class LocalRAGPipeline:
         self._system_prompt = get_system_prompt(is_rag_prompt=False)
         self._engine = LocalChatEngine(host=host)
         self._default_model = LocalKgModels.set(self._model_name, host=host)
-        self._query_engine = None
-        self._ingestion = LocalDataIngestion()
+        self._query_engine: BaseChatEngine = None
+        self._ingestion = KgDataIngestion()
         Settings.llm = LocalKgModels.set(host=host)
         Settings.embed_model = LocalEmbedding.set(host=host)
 
@@ -66,7 +67,7 @@ class LocalRAGPipeline:
     def reset_conversation(self, mode = "kg"):
         self.reset_engine(mode)
         self.set_system_prompt(
-            get_system_prompt(language=self._language, is_rag_prompt=False)
+            get_system_prompt(is_rag_prompt=False)
         )
 
     def set_embed_model(self, model_name: str):
@@ -84,7 +85,8 @@ class LocalRAGPipeline:
     def check_exist_embed(self, model_name: str) -> bool:
         return LocalEmbedding.check_model_exist(self._host, model_name)
 
-    def store_nodes(self, input_files: list[str] = None) -> None:
+    def store_nodes(self, input_files: list[str] | None = None) -> None:
+        input_files = input_files or []        
         self._ingestion.store_nodes(input_files=input_files)
 
     def set_chat_mode(self, system_prompt: str | None = None):
