@@ -266,6 +266,7 @@ class LocalChatbotUI:
             theme=gr.themes.Soft(primary_hue="slate"),
             js=JS_LIGHT_THEME,
             css=CSS,
+            title="Legal RAGspert"
         ) as demo:
             gr.Markdown("## Case Law assistant")
             with gr.Tab("Interface"):
@@ -335,8 +336,8 @@ class LocalChatbotUI:
 
                         with gr.Row(variant=self._variant):
                             chat_mode = gr.Dropdown(
-                                choices=["chat", "QA"],
-                                value="QA",
+                                choices=["kg"],
+                                value="kg",
                                 min_width=50,
                                 show_label=False,
                                 interactive=True,

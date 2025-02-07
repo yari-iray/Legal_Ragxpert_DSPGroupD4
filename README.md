@@ -134,12 +134,18 @@ In the current form, not all packages are explicitly compatible with each other,
 WARNING: this can break your Python environment. Please use a virtual environment.
 
 #### To install everything properly:
+0. Install Python 3.11, version 3.12 is currently not supported by Llama-index and may lead to errors
 1. Ensure that you have installed poetry
 2. Set the working directory in your terminal to this folder
 3. Run poetry install to install the dependencies
 4. Run `pip install llama-index-graph-stores-neo4j`
 5. Run `pip install llama-index -U`
 5. Run `pip install llama-index-core -U`
+6. Ensure that package version of `llama-index-embeddings-huggingface` is at 0.5.1, otherwise you will get errors that the attribute 'pydantic-private' is missing
 
-There will be errors shown that  pip is not taking into account all packages, as not all packages are explicitly compatible with each other.
-The chatbot will still run.
+There will be errors shown that  pip is not taking into account all packages, as not all packages are explicitly compatible with each other. This message may be ignored, as the chatbot will run without issue. If you get any errors from huggingface, make sure to delete the cache folder first before trying anything else.
+
+## Neo4j configuration
+- Install neo4j
+- Ensure that the configuration is set correctly
+- Probably change the DBMS password to 'password' to get it to work correctly

@@ -1,0 +1,719 @@
+@prefix : <http://ontology.tno.nl/normengineering/flint#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix src: <http://ontology.tno.nl/normengineering/source#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix flint: <http://ontology.tno.nl/normengineering/flint#> .
+
+:BarcelonaTractionCase
+  rdf:type :Act ;
+  rdfs:label "Barcelona Traction Case" ;
+  dcterms:description "A landmark international legal case involving the bankruptcy of Barcelona Traction, a holding company controlling electricity-producing companies in Catalonia, declared bankrupt in 1948 by the Court of Reus in Spain." ;
+  :hasActor :Belgium, :Spain ;
+  :hasObject :BarcelonaTraction ;
+  :hasRecipient :BelgianShareholders ;
+  :hasPrecondition :BankruptcyDeclaration ;
+  :hasPostcondition :ReparationClaim ;
+  :hasSource src:ICJJudgment .
+
+:Belgium
+  rdf:type :Agent ;
+  rdfs:label "Belgium" ;
+  dcterms:description "The state representing the interests of Belgian shareholders in Barcelona Traction." .
+
+:Spain
+  rdf:type :Agent ;
+  rdfs:label "Spain" ;
+  dcterms:description "The state accused of breaching international law obligations in the Barcelona Traction case." .
+
+:BarcelonaTraction
+  rdf:type :Object ;
+  rdfs:label "Barcelona Traction" ;
+  dcterms:description "A holding company that controlled electricity-producing companies in Catalonia, declared bankrupt in 1948 due to unpaid interest on bonds." .
+
+:BelgianShareholders
+  rdf:type :Agent ;
+  rdfs:label "Belgian Shareholders" ;
+  dcterms:description "Shareholders of Barcelona Traction who were represented by Belgium in the case." .
+
+:BankruptcyDeclaration
+  rdf:type :Fact ;
+  rdfs:label "Bankruptcy Declaration" ;
+  dcterms:description "The declaration of bankruptcy by the Court of Reus in Spain in 1948, which led to the loss of control of subsidiary companies by Barcelona Traction." .
+
+:ReparationClaim
+  rdf:type :Fact ;
+  rdfs:label "Reparation Claim" ;
+  dcterms:description "Belgium's claim for reparation for the injury caused to Barcelona Traction and its shareholders due to Spain's alleged breach of international law." .
+
+:ICJJudgment
+  rdf:type src:Element ;
+  rdfs:label "ICJ Judgment" ;
+  dcterms:description "The judgment by the International Court of Justice regarding the Barcelona Traction case, addressing issues of diplomatic protection and obligations erga omnes." .
+
+:ObligationsErgaOmnes
+  rdf:type :Fact ;
+  rdfs:label "Obligations Erga Omnes" ;
+  dcterms:description "Obligations under international law that are owed to the international community as a whole, discussed in the ICJ judgment." .
+
+:DiplomaticProtection
+  rdf:type :Fact ;
+  rdfs:label "Diplomatic Protection" ;
+  dcterms:description "The protection exercised by a state on behalf of its nationals, including shareholders, in cases of harm caused by another state." .
+
+:JuanMarch
+  rdf:type :Agent ;
+  rdfs:label "Juan March" ;
+  dcterms:description "A key figure in FECSA, closely linked to General Francisco Franco, who played a significant role in the Spanish Civil War." .
+
+:FECSA
+  rdf:type :Object ;
+  rdfs:label "Fuerzas Eléctricas de Cataluña SA (FECSA)" ;
+  dcterms:description "A Spanish company that acquired Barcelona Traction's assets after its bankruptcy." .
+
+:SOFINA
+  rdf:type :Object ;
+  rdfs:label "SOFINA" ;
+  dcterms:description "A Belgian company representing private interests in the Barcelona Traction case." .
+
+:PeatAndMarwick
+  rdf:type :Agent ;
+  rdfs:label "Peat and Marwick" ;
+  dcterms:description "An accounting firm consulted by Spain, which found the evaluation of Barcelona Traction's assets in the bankruptcy proceedings to be fair." .
+
+:DenialOfJustice
+  rdf:type :Fact ;
+  rdfs:label "Denial of Justice" ;
+  dcterms:description "A claim made by Belgium that Spain had denied justice to Barcelona Traction by not allowing the company to oppose the bankruptcy declaration." .
+
+:ExhaustionOfLocalRemedies
+  rdf:type :Fact ;
+  rdfs:label "Exhaustion of Local Remedies" ;
+  dcterms:description "A principle in international law requiring that all local legal remedies be exhausted before a case can be brought to an international court." .
+
+:ShareholderRights
+  rdf:type :Fact ;
+  rdfs:label "Shareholder Rights" ;
+  dcterms:description "The rights of shareholders, distinct from the rights of the company, as discussed in the ICJ judgment." .
+
+:CorporateNationality
+  rdf:type :Fact ;
+  rdfs:label "Corporate Nationality" ;
+  dcterms:description "The nationality of a corporation, determined by its place of incorporation and other factors, as discussed in the ICJ judgment." .
+
+:InternationalLaw
+  rdf:type :Fact ;
+  rdfs:label "International Law" ;
+  dcterms:description "The body of legal rules governing relations between states, including diplomatic protection and obligations erga omnes." .
+
+:RobertoAgo
+  rdf:type :Agent ;
+  rdfs:label "Roberto Ago" ;
+  dcterms:description "A legal scholar and practitioner who played a significant role in the pleadings of the Barcelona Traction case." .
+
+:AntonioMalintoppi
+  rdf:type :Agent ;
+  rdfs:label "Antonio Malintoppi" ;
+  dcterms:description "A legal practitioner who assisted Roberto Ago in the pleadings of the Barcelona Traction case." .
+
+:DelagoaBayCase
+  rdf:type :Act ;
+  rdfs:label "Delagoa Bay Case" ;
+  dcterms:description "A historical legal case referenced by Roberto Ago in his pleadings, using a metaphor about an old lady whose veil should not be lifted." .
+
+:SpanishMonetaryAuthorities
+  rdf:type :Agent ;
+  rdfs:label "Spanish Monetary Authorities" ;
+  dcterms:description "The authorities responsible for monetary policy in Spain, which refused to allow Barcelona Traction to export profits, leading to its bankruptcy." .
+
+:GeneralFranciscoFranco
+  rdf:type :Agent ;
+  rdfs:label "General Francisco Franco" ;
+  dcterms:description "The dictator of Spain during the Spanish Civil War, closely linked to Juan March." .
+
+:SpanishCivilWar
+  rdf:type :Fact ;
+  rdfs:label "Spanish Civil War" ;
+  dcterms:description "A conflict in Spain during which Juan March provided air transport to General Francisco Franco from the Canary Islands." .
+
+:BelgiumApplicationToICJ
+  rdf:type :Act ;
+  rdfs:label "Belgium's Application to the ICJ" ;
+  dcterms:description "Belgium's application to the International Court of Justice on 23 September 1958, seeking reparation for the injury caused to Barcelona Traction." .
+
+:SpainPreliminaryObjections
+  rdf:type :Act ;
+  rdfs:label "Spain's Preliminary Objections" ;
+  dcterms:description "Spain's objections to Belgium's application to the ICJ, including issues of admissibility, jurisdiction, and exhaustion of local remedies." .
+
+:ICJStatuteArticle37
+  rdf:type :Fact ;
+  rdfs:label "ICJ Statute Article 37" ;
+  dcterms:description "A provision in the ICJ Statute that allows for the transfer of jurisdiction from the Permanent Court of International Justice to the ICJ." .
+
+:BelgiumNewApplication
+  rdf:type :Act ;
+  rdfs:label "Belgium's New Application to the ICJ" ;
+  dcterms:description "Belgium's new application to the ICJ on 19 June 1962, seeking reparation for the damage suffered by Belgian shareholders of Barcelona Traction." .
+
+:JudgeLachs
+  rdf:type :Agent ;
+  rdfs:label "Judge Lachs" ;
+  dcterms:description "A judge at the ICJ who is attributed with drafting the obiter dicta on obligations erga omnes in the 1970 judgment." .
+
+:SouthWestAfricaCases
+  rdf:type :Act ;
+  rdfs:label "South West Africa Cases" ;
+  dcterms:description "A series of cases at the ICJ that influenced the Court's approach to obligations erga omnes in the Barcelona Traction case." .
+
+:HumanRightsProtection
+  rdf:type :Fact ;
+  rdfs:label "Human Rights Protection" ;
+  dcterms:description "The protection of human rights, including protection against denial of justice, as discussed in the ICJ judgment." .
+
+:EuropeanConventionOnHumanRights
+  rdf:type :Fact ;
+  rdfs:label "European Convention on Human Rights" ;
+  dcterms:description "A treaty that protects human rights in Europe, which Spain was not a party to at the time of the Barcelona Traction case." .
+
+:AhmadouSadioDialloCase
+  rdf:type :Act ;
+  rdfs:label "Ahmadou Sadio Diallo Case" ;
+  dcterms:description "A case at the ICJ that expanded the scope of diplomatic protection to include internationally guaranteed human rights." .
+  
+  
+  
+  
+  
+
+:DiplomaticProtectionForShareholders
+  rdf:type :Fact ;
+  rdfs:label "Diplomatic Protection for Shareholders" ;
+  dcterms:description "The concept of diplomatic protection extended to shareholders, allowing the state of nationality of shareholders to intervene on their behalf in cases of harm caused to a company." ;
+  :hasSource :BarcelonaTractionCase .
+
+:SubstantiveApproach
+  rdf:type :Fact ;
+  rdfs:label "Substantive Approach" ;
+  dcterms:description "An approach to diplomatic protection that focuses on protecting the real interests at stake, rather than adhering strictly to formalistic rules." ;
+  :hasSource :BarcelonaTractionCase .
+
+:FormalisticApproach
+  rdf:type :Fact ;
+  rdfs:label "Formalistic Approach" ;
+  dcterms:description "An approach to diplomatic protection that adheres strictly to formal rules, often at the expense of addressing the real interests at stake." ;
+  :hasSource :BarcelonaTractionCase .
+
+:BilateralInvestmentTreaties
+  rdf:type :Fact ;
+  rdfs:label "Bilateral Investment Treaties" ;
+  dcterms:description "Treaties between two states that provide protections for investors, including shareholders, often favoring a substantive approach to diplomatic protection." ;
+  :hasSource :BarcelonaTractionCase .
+
+:CaseLawUncertainty
+  rdf:type :Fact ;
+  rdfs:label "Case Law Uncertainty" ;
+  dcterms:description "The uncertainty in case law regarding the protection of shareholders, with some indications that claims could be preferred if harm was caused to a company with the nationality of the host state." ;
+  :hasSource :BarcelonaTractionCase .
+
+:JudicialInterventionExpectation
+  rdf:type :Fact ;
+  rdfs:label "Judicial Intervention Expectation" ;
+  dcterms:description "The expectation among scholars and panelists that the ICJ would allow judicial intervention by the shareholder's national state in the Barcelona Traction case." ;
+  :hasSource :BarcelonaTractionCase .
+
+:ThirdPreliminaryObjection
+  rdf:type :Act ;
+  rdfs:label "Third Preliminary Objection" ;
+  dcterms:description "Spain's objection to Belgium's claim, which the ICJ joined to the merits, indicating reluctance to conclude that only the state of nationality of the company could exercise diplomatic protection." ;
+  :hasSource :BarcelonaTractionCase .
+
+:BelgiumClaimRejection
+  rdf:type :Act ;
+  rdfs:label "Belgium Claim Rejection" ;
+  dcterms:description "The ICJ's rejection of Belgium's claim by an almost unanimous vote, with only the judge ad hoc selected by Belgium dissenting." ;
+  :hasSource :BarcelonaTractionCase .
+
+:JudgeTanaka
+  rdf:type :Agent ;
+  rdfs:label "Judge Tanaka" ;
+  dcterms:description "A judge at the ICJ who concluded that Belgium had an independent right to protect Belgian shareholders in Barcelona Traction under customary international law." ;
+  :hasSource :BarcelonaTractionCase .
+
+:JudgeJessup
+  rdf:type :Agent ;
+  rdfs:label "Judge Jessup" ;
+  dcterms:description "A judge at the ICJ who defended the primacy of the general economic interest of the state in protecting private investments abroad." ;
+  :hasSource :BarcelonaTractionCase .
+
+:JudgeGros
+  rdf:type :Agent ;
+  rdfs:label "Judge Gros" ;
+  dcterms:description "A judge at the ICJ who emphasized the relevance of whether an investment was connected with a particular national economy." ;
+  :hasSource :BarcelonaTractionCase .
+
+:JudgeFitzmaurice
+  rdf:type :Agent ;
+  rdfs:label "Judge Fitzmaurice" ;
+  dcterms:description "A judge at the ICJ who pointed to the possible recognition of Belgian capacity to claim on behalf of Belgian shareholders in Barcelona Traction." ;
+  :hasSource :BarcelonaTractionCase .
+
+:SeparateOpinions
+  rdf:type :Fact ;
+  rdfs:label "Separate Opinions" ;
+  dcterms:description "The lengthy separate opinions appended by Judges Tanaka, Jessup, Gros, and Fitzmaurice, which were much appreciated in subsequent literature." ;
+  :hasSource :BarcelonaTractionCase .
+
+:MajorityViewDisappointment
+  rdf:type :Fact ;
+  rdfs:label "Majority View Disappointment" ;
+  dcterms:description "The prevailing disappointment in subsequent literature with the line of argument reflecting the majority view in the Barcelona Traction case." ;
+  :hasSource :BarcelonaTractionCase .
+
+:RightsOfCompanyVsShareholders
+  rdf:type :Fact ;
+  rdfs:label "Rights of Company vs Shareholders" ;
+  dcterms:description "The key distinction made by the ICJ between the rights of a company and those of its shareholders, which was decisive in the rejection of Belgium's claim." ;
+  :hasSource :BarcelonaTractionCase .
+
+:CorporateEntityRecognition
+  rdf:type :Fact ;
+  rdfs:label "Corporate Entity Recognition" ;
+  dcterms:description "The ICJ's recognition of the corporate entity as an institution created by states, requiring reference to municipal law for determining rights of companies and shareholders." ;
+  :hasSource :BarcelonaTractionCase .
+
+:ShareholderRightsExamples
+  rdf:type :Fact ;
+  rdfs:label "Shareholder Rights Examples" ;
+  dcterms:description "Examples of shareholder rights distinct from those of the company, including the right to declared dividends, attendance at general meetings, and sharing in residual assets on liquidation." ;
+  :hasSource :BarcelonaTractionCase .
+
+:InterestsVsRights
+  rdf:type :Fact ;
+  rdfs:label "Interests vs Rights" ;
+  dcterms:description "The distinction between the interests and rights of shareholders, which is not always clearly outlined in municipal law." ;
+  :hasSource :BarcelonaTractionCase .
+
+:MunicipalLawReference
+  rdf:type :Fact ;
+  rdfs:label "Municipal Law Reference" ;
+  dcterms:description "The ICJ's reference to rules generally accepted by municipal legal systems, without specifying a particular system, to determine the rights of companies and shareholders." ;
+  :hasSource :BarcelonaTractionCase .
+
+:ConflictOfLaws
+  rdf:type :Fact ;
+  rdfs:label "Conflict of Laws" ;
+  dcterms:description "The ICJ's reluctance to address issues of conflict of laws and to specify which municipal law applies in determining the rights of companies and shareholders." ;
+  :hasSource :BarcelonaTractionCase .
+
+:CustomaryInternationalLaw
+  rdf:type :Fact ;
+  rdfs:label "Customary International Law" ;
+  dcterms:description "The ICJ's reliance on general statements under customary international law, without referring to state practice or arbitral decisions, to justify its conclusion in the Barcelona Traction case." ;
+  :hasSource :BarcelonaTractionCase .
+
+:SilenceOfInternationalLaw
+  rdf:type :Fact ;
+  rdfs:label "Silence of International Law" ;
+  dcterms:description "The ICJ's observation that international law is silent on the protection of shareholders, leading to reliance on municipal law for determining their rights." ;
+  :hasSource :BarcelonaTractionCase .
+
+:CompetingDiplomaticClaims
+  rdf:type :Fact ;
+  rdfs:label "Competing Diplomatic Claims" ;
+  dcterms:description "The ICJ's concern that adopting the theory of diplomatic protection for shareholders could lead to competing claims and create confusion in international economic relations." ;
+  :hasSource :BarcelonaTractionCase .
+
+:JudgeFitzmauriceObjection
+  rdf:type :Fact ;
+  rdfs:label "Judge Fitzmaurice's Objection" ;
+  dcterms:description "Judge Fitzmaurice's observation that the ICJ's concern about competing diplomatic claims would only affect the quantum of reparation recoverable by various governments." ;
+  :hasSource :BarcelonaTractionCase .
+  
+  
+ :UnitedStates rdf:type :Agent ;
+    rdfs:label "United States" ;
+    :hasSource src:ELSI_Case .
+
+:Italy rdf:type flint:Agent ;
+    rdfs:label "Italy" ;
+    flint:hasSource src:ELSI_Case .
+
+:ELSI_Case rdf:type flint:Fact ;
+    rdfs:label "ELSI Case" ;
+    flint:hasSource src:ELSI_Case .
+
+:BarcelonaTractionCase rdf:type flint:Fact ;
+    rdfs:label "Barcelona Traction Case" ;
+    flint:hasSource src:BarcelonaTractionCase .
+
+:FCNTreaty rdf:type flint:Fact ;
+    rdfs:label "Treaty of Friendship, Commerce and Navigation (FCN)" ;
+    flint:hasSource src:FCNTreaty .
+
+:DiplomaticProtection rdf:type flint:Act ;
+    rdfs:label "Diplomatic Protection" ;
+    flint:hasActor :UnitedStates ;
+    flint:hasObject :Shareholders ;
+    flint:hasRecipient :Italy ;
+    flint:hasPrecondition :HarmToCompany ;
+    flint:creates :ProtectionClaim ;
+    flint:terminates :HarmToCompany .
+
+:HarmToCompany rdf:type flint:Fact ;
+    rdfs:label "Harm caused to a company" ;
+    flint:hasSource src:ELSI_Case .
+
+:ProtectionClaim rdf:type flint:Fact ;
+    rdfs:label "Claim for diplomatic protection" ;
+    flint:hasSource src:ELSI_Case .
+
+:Shareholders rdf:type flint:Agent ;
+    rdfs:label "Shareholders" ;
+    flint:hasSource src:ELSI_Case .
+
+:PropertyTaking rdf:type flint:Act ;
+    rdfs:label "Taking of property" ;
+    flint:hasActor :Italy ;
+    flint:hasObject :CompanyProperty ;
+    flint:hasRecipient :Shareholders ;
+    flint:hasPrecondition :PropertyOwnership ;
+    flint:creates :CompensationClaim ;
+    flint:terminates :PropertyOwnership .
+
+:CompanyProperty rdf:type flint:Fact ;
+    rdfs:label "Property of the company" ;
+    flint:hasSource src:ELSI_Case .
+
+:PropertyOwnership rdf:type flint:Fact ;
+    rdfs:label "Ownership of property" ;
+    flint:hasSource src:ELSI_Case .
+
+:CompensationClaim rdf:type flint:Fact ;
+    rdfs:label "Claim for compensation" ;
+    flint:hasSource src:ELSI_Case .
+
+:ArticleVII_FCN rdf:type flint:Fact ;
+    rdfs:label "Article VII of the FCN Treaty" ;
+    flint:hasSource src:FCNTreaty .
+
+:DirectRightsViolation rdf:type flint:Act ;
+    rdfs:label "Violation of direct rights of shareholders" ;
+    flint:hasActor :DemocraticRepublicOfCongo ;
+    flint:hasObject :Shareholders ;
+    flint:hasRecipient :Guinea ;
+    flint:hasPrecondition :DirectRights ;
+    flint:creates :DiplomaticProtectionClaim ;
+    flint:terminates :DirectRights .
+
+:DemocraticRepublicOfCongo rdf:type flint:Agent ;
+    rdfs:label "Democratic Republic of the Congo" ;
+    flint:hasSource src:DialloCase .
+
+:Guinea rdf:type flint:Agent ;
+    rdfs:label "Guinea" ;
+    flint:hasSource src:DialloCase .
+
+:DirectRights rdf:type flint:Fact ;
+    rdfs:label "Direct rights of shareholders" ;
+    flint:hasSource src:DialloCase .
+
+:DiplomaticProtectionClaim rdf:type flint:Fact ;
+    rdfs:label "Claim for diplomatic protection of shareholders" ;
+    flint:hasSource src:DialloCase .
+
+# Relationships
+:UnitedStates flint:exercises :DiplomaticProtection .
+:Italy flint:interprets :FCNTreaty .
+:ELSI_Case flint:examines :FCNTreaty .
+:Chamber flint:decides :ELSI_Case .
+:Chamber flint:quotes :FCNTreaty .
+:Chamber flint:observes :PropertyTaking .
+:Chamber flint:expressesSympathy :UnitedStates .
+:Chamber flint:concludes :NoBreachOfTreaty .
+:NoBreachOfTreaty rdf:type flint:Fact ;
+    rdfs:label "No breach of treaty provision" ;
+    flint:hasSource src:ELSI_Case .
+
+:ILC flint:endorses :DistinctionBetweenRights .
+:DistinctionBetweenRights rdf:type flint:Fact ;
+    rdfs:label "Distinction between conduct affecting direct rights of shareholders and conduct affecting rights of the company" ;
+    flint:hasSource src:ILC_DraftArticles .
+
+:ILC flint:expresses :RuleOnDiplomaticProtection .
+:RuleOnDiplomaticProtection rdf:type flint:Fact ;
+    rdfs:label "Rule on diplomatic protection of shareholders" ;
+    flint:hasSource src:ILC_DraftArticles .
+
+:Guinea flint:argues :DirectRightsViolation .
+:Court flint:refersTo :BarcelonaTractionCase .
+:Court flint:determines :LegalPersonality .
+:LegalPersonality rdf:type flint:Fact ;
+    rdfs:label "Legal personality of companies" ;
+    flint:hasSource src:DialloCase .
+
+:Court flint:concludes :AdmissibilityOfClaim .
+:AdmissibilityOfClaim rdf:type flint:Fact ;
+    rdfs:label "Admissibility of Guinea's claim" ;
+    flint:hasSource src:DialloCase .
+	
+	
+	
+	
+	
+	
+# Entities
+:BarcelonaTractionJudgment rdf:type flint:Fact ;
+    rdfs:label "Barcelona Traction Judgment" ;
+    flint:hasSource src:BarcelonaTractionCase .
+
+:MrDiallo rdf:type flint:Agent ;
+    rdfs:label "Mr. Diallo" ;
+    flint:hasSource src:DialloCase .
+
+:DemocraticRepublicOfCongo rdf:type flint:Agent ;
+    rdfs:label "Democratic Republic of the Congo" ;
+    flint:hasSource src:DialloCase .
+
+:DirectRights rdf:type flint:Fact ;
+    rdfs:label "Direct rights of shareholders" ;
+    flint:hasSource src:DialloCase .
+
+:LegalPersonality rdf:type flint:Fact ;
+    rdfs:label "Legal personality of companies" ;
+    flint:hasSource src:DialloCase .
+
+:NationalityOfCompany rdf:type flint:Fact ;
+    rdfs:label "Nationality of the company" ;
+    flint:hasSource src:BarcelonaTractionCase .
+
+:TraditionalRule rdf:type flint:Fact ;
+    rdfs:label "Traditional rule for diplomatic protection" ;
+    flint:hasSource src:BarcelonaTractionCase .
+
+:GenuineConnection rdf:type flint:Fact ;
+    rdfs:label "Genuine connection between state and company" ;
+    flint:hasSource src:BarcelonaTractionCase .
+
+:NottebohmJudgment rdf:type flint:Fact ;
+    rdfs:label "Nottebohm Judgment" ;
+    flint:hasSource src:NottebohmCase .
+
+:InternationalLawCommission rdf:type flint:Agent ;
+    rdfs:label "International Law Commission" ;
+    flint:hasSource src:ILC_DraftArticles .
+
+:DiplomaticProtectionExceptions rdf:type flint:Fact ;
+    rdfs:label "Exceptions allowing diplomatic protection of shareholders" ;
+    flint:hasSource src:BarcelonaTractionCase .
+
+# Relationships
+:Court flint:quotes :BarcelonaTractionJudgment .
+:Court flint:identifies :DirectRights .
+:Court flint:examines :DirectRights .
+:Court flint:observes :LegalPersonality .
+:Court flint:applies :LawOfIncorporation .
+:LawOfIncorporation rdf:type flint:Fact ;
+    rdfs:label "Law of the state of incorporation" ;
+    flint:hasSource src:DialloCase .
+
+:Court flint:follows :BarcelonaTractionApproach .
+:BarcelonaTractionApproach rdf:type flint:Fact ;
+    rdfs:label "Approach taken in Barcelona Traction" ;
+    flint:hasSource src:BarcelonaTractionCase .
+
+:Court flint:states :TraditionalRule .
+:Court flint:notes :GenuineConnection .
+:Court flint:refersTo :NottebohmJudgment .
+:Court flint:concludes :GenuineConnectionExists .
+:GenuineConnectionExists rdf:type flint:Fact ;
+    rdfs:label "Genuine connection exists between Canada and Barcelona Traction" ;
+    flint:hasSource src:BarcelonaTractionCase .
+
+:InternationalLawCommission flint:doesNotEndorse :GenuineConnection .
+:InternationalLawCommission flint:states :NationalityBasedOnControl .
+:NationalityBasedOnControl rdf:type flint:Fact ;
+    rdfs:label "Nationality based on controlling shareholders" ;
+    flint:hasSource src:ILC_DraftArticles .
+
+:Court flint:discusses :DiplomaticProtectionExceptions .
+:Court flint:notes :ExceptionsNotApplicable .
+:ExceptionsNotApplicable rdf:type flint:Fact ;
+    rdfs:label "Exceptions not applicable to the case" ;
+    flint:hasSource src:BarcelonaTractionCase .
+
+:Court flint:appearsFavourableTo :Exceptions .
+:Exceptions rdf:type flint:Fact ;
+    rdfs:label "Exceptions extending protection of shareholders" ;
+    flint:hasSource src:BarcelonaTractionCase .
+	
+	
+	
+	
+
+
+# Entities
+:LiftingTheVeil rdf:type flint:Fact ;
+    rdfs:label "Lifting the veil in international law" ;
+    flint:hasSource src:BarcelonaTractionCase .
+
+:EquityTheory rdf:type flint:Fact ;
+    rdfs:label "Theory based on equity for diplomatic protection of shareholders" ;
+    flint:hasSource src:BarcelonaTractionCase .
+
+:InternationalLawCommission rdf:type flint:Agent ;
+    rdfs:label "International Law Commission" ;
+    flint:hasSource src:ILC_DraftArticles .
+
+:Article11 rdf:type flint:Fact ;
+    rdfs:label "Article 11 of the ILC draft articles on Diplomatic Protection" ;
+    flint:hasSource src:ILC_DraftArticles .
+
+:ProtectionBySubstitution rdf:type flint:Fact ;
+    rdfs:label "Protection by substitution for shareholders" ;
+    flint:hasSource src:DialloCase .
+
+:LegalDemiseOfCompany rdf:type flint:Fact ;
+    rdfs:label "Legal demise of the company" ;
+    flint:hasSource src:BarcelonaTractionCase .
+
+:LackOfCapacity rdf:type flint:Fact ;
+    rdfs:label "Lack of capacity of the company's national state to act on its behalf" ;
+    flint:hasSource src:BarcelonaTractionCase .
+
+:ExerciseOfDiplomaticProtection rdf:type flint:Act ;
+    rdfs:label "Exercise of diplomatic protection" ;
+    flint:hasActor :State ;
+    flint:hasObject :CompanyOrShareholders ;
+    flint:hasPrecondition :PreconditionsForProtection ;
+    flint:creates :DiplomaticProtectionClaim ;
+    flint:terminates :HarmToCompanyOrShareholders .
+
+:State rdf:type flint:Agent ;
+    rdfs:label "State" ;
+    flint:hasSource src:BarcelonaTractionCase .
+
+:CompanyOrShareholders rdf:type flint:Agent ;
+    rdfs:label "Company or shareholders" ;
+    flint:hasSource src:BarcelonaTractionCase .
+
+:PreconditionsForProtection rdf:type flint:Fact ;
+    rdfs:label "Preconditions for the exercise of diplomatic protection" ;
+    flint:hasSource src:BarcelonaTractionCase .
+
+:DiplomaticProtectionClaim rdf:type flint:Fact ;
+    rdfs:label "Claim for diplomatic protection" ;
+    flint:hasSource src:BarcelonaTractionCase .
+
+:HarmToCompanyOrShareholders rdf:type flint:Fact ;
+    rdfs:label "Harm caused to the company or shareholders" ;
+    flint:hasSource src:BarcelonaTractionCase .
+
+# Relationships
+:Court flint:reflects :LiftingTheVeil .
+:Court flint:refersTo :EquityTheory .
+:InternationalLawCommission flint:expresses :Article11 .
+:Court flint:discusses :ProtectionBySubstitution .
+:Court flint:states :NoCustomaryExceptionForSubstitution .
+:NoCustomaryExceptionForSubstitution rdf:type flint:Fact ;
+    rdfs:label "No customary exception for protection by substitution" ;
+    flint:hasSource src:DialloCase .
+
+:Court flint:notes :LegalDemiseOfCompany .
+:Court flint:refersTo :LackOfCapacity .
+:Court flint:concludes :CanadianProtectionExercised .
+:CanadianProtectionExercised rdf:type flint:Fact ;
+    rdfs:label "Canadian government exercised diplomatic protection for Barcelona Traction" ;
+    flint:hasSource src:BarcelonaTractionCase .
+
+:Court flint:observes :StateDiscretionInProtection .
+:StateDiscretionInProtection rdf:type flint:Fact ;
+    rdfs:label "State has discretion in exercising diplomatic protection" ;
+    flint:hasSource src:BarcelonaTractionCase .
+
+:Court flint:endorses :MavrommatisDefinition .
+:MavrommatisDefinition rdf:type flint:Fact ;
+    rdfs:label "Definition of diplomatic protection from the Mavrommatis case" ;
+    flint:hasSource src:MavrommatisCase .
+
+:Court flint:gives :DifferentDefinitionInDiallo .
+:DifferentDefinitionInDiallo rdf:type flint:Fact ;
+    rdfs:label "Different definition of diplomatic protection in the Diallo case" ;
+    flint:hasSource src:DialloCase .
+	
+	
+	
+	
+:CustomaryInternationalLaw rdf:type flint:Fact ;
+    rdfs:label "Customary international law on diplomatic protection" ;
+    flint:hasSource src:ILC_DraftArticles .
+
+:Article1 rdf:type flint:Fact ;
+    rdfs:label "Article 1 of the ILC draft articles on Diplomatic Protection" ;
+    flint:hasSource src:ILC_DraftArticles .
+
+:DiplomaticProtectionDefinition rdf:type flint:Fact ;
+    rdfs:label "Definition of diplomatic protection" ;
+    flint:hasSource src:ILC_DraftArticles .
+
+:StateDiscretion rdf:type flint:Fact ;
+    rdfs:label "State discretion in exercising diplomatic protection" ;
+    flint:hasSource src:ILC_DraftArticles .
+
+:CanadianGovernment rdf:type flint:Agent ;
+    rdfs:label "Canadian Government" ;
+    flint:hasSource src:BarcelonaTractionCase .
+
+:SpanishGovernment rdf:type flint:Agent ;
+    rdfs:label "Spanish Government" ;
+    flint:hasSource src:BarcelonaTractionCase .
+
+:JudgeFitzmaurice rdf:type flint:Agent ;
+    rdfs:label "Judge Fitzmaurice" ;
+    flint:hasSource src:BarcelonaTractionCase .
+
+:JusStandi rdf:type flint:Fact ;
+    rdfs:label "Jus standi of a state in diplomatic protection" ;
+    flint:hasSource src:BarcelonaTractionCase .
+
+:InvestmentTreaties rdf:type flint:Fact ;
+    rdfs:label "International agreements for the protection of foreign investments" ;
+    flint:hasSource src:DialloCase .
+
+:CustomaryLawDevelopment rdf:type flint:Fact ;
+    rdfs:label "Development of customary international law on diplomatic protection" ;
+    flint:hasSource src:DialloCase .
+
+# Relationships
+:Court flint:notes :CustomaryInternationalLaw .
+:Court flint:refersTo :Article1 .
+:Court flint:defines :DiplomaticProtectionDefinition .
+:Court flint:acknowledges :StateDiscretion .
+:CanadianGovernment flint:exercises :DiplomaticProtection .
+:SpanishGovernment flint:doesNotQuestion :CanadianRightToProtect .
+:JudgeFitzmaurice flint:questions :JusStandiPreclusion .
+:JusStandiPreclusion rdf:type flint:Fact ;
+    rdfs:label "Preclusion of Spain from raising jus standi objection" ;
+    flint:hasSource src:BarcelonaTractionCase .
+
+:Court flint:observes :RoleOfDiplomaticProtectionFaded .
+:RoleOfDiplomaticProtectionFaded rdf:type flint:Fact ;
+    rdfs:label "Role of diplomatic protection has faded due to investment treaties" ;
+    flint:hasSource src:DialloCase .
+
+:Court flint:follows :BarcelonaTractionApproach .
+:BarcelonaTractionApproach rdf:type flint:Fact ;
+    rdfs:label "Approach taken in Barcelona Traction" ;
+    flint:hasSource src:BarcelonaTractionCase .
+
+:Court flint:notes :VarietyOfInvestmentTreatyProvisions .
+:VarietyOfInvestmentTreatyProvisions rdf:type flint:Fact ;
+    rdfs:label "Great variety of treaty provisions concerning investments in shares" ;
+    flint:hasSource src:DialloCase .
+
+:Court flint:observes :StateAttitudesOnInvestmentProtection .
+:StateAttitudesOnInvestmentProtection rdf:type flint:Fact ;
+    rdfs:label "Attitudes of states on extending protection of foreign investments" ;
+    flint:hasSource src:DialloCase .

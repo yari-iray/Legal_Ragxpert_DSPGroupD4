@@ -16,7 +16,7 @@ from llama_index.core.evaluation import (
 )
 from llama_index.core.evaluation import EmbeddingQAFinetuneDataset
 from llama_index.core.storage.docstore import DocumentStore
-from ..core.engine import LocalChatEngine, LocalRetriever
+from ..core.engine import LocalChatEngine, LocalRetrieverProvider
 from ..core.model import LocalKgModels
 from ..setting import RAGSettings
 from ..ollama_server import is_port_open, run_ollama_server
@@ -65,7 +65,7 @@ class RAGPipelineEvaluator:
             "bm25_rerank": BM25Retriever.from_defaults(
                 index=self._index, similarity_top_k=self._top_k, verbose=True
             ),
-            "router": LocalRetriever(host=host).get_retrievers(
+            "router": LocalRetrieverProvider(host=host).get_retriever(
                 llm=self._llm, nodes=nodes
             ),
         }
