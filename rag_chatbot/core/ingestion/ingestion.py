@@ -56,7 +56,7 @@ class LocalDataIngestion:
             else:
                 document = fitz.open(input_file)
                 all_text = ""
-                for doc_idx, page in enumerate(document):
+                for doc_idx, page in enumerate(document): # type: ignore
                     page_text = page.get_text("text")
                     page_text = self._filter_text(page_text)
                     all_text += " " + page_text

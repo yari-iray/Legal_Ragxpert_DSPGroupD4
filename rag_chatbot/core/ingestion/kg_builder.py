@@ -1,10 +1,8 @@
 from llama_index.core.base.llms.types import ChatMessage
-from setting.setting import RAGSettings
+from ...setting import RAGSettings
 from llama_index.llms.ollama import Ollama
-from llama_index.core import Settings
 from llama_index.core.memory import ChatMemoryBuffer
 from llama_index.core.chat_engine import SimpleChatEngine, CondensePlusContextChatEngine
-import asyncio
 import re
 
 class LLMKnowledgeGraphBuilder:    
@@ -76,7 +74,9 @@ class LLMKnowledgeGraphBuilder:
         # Remove deepseek's <think> part
         cleaned_output = re.sub(r"<think>.*?</think>", "", model_output, flags=re.DOTALL)
         
+        # extract ttl
         match = self.ttl_pattern.search(cleaned_output)
+        
         if match:
             return match.group(1)
         else:
