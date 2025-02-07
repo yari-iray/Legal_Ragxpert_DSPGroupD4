@@ -14,14 +14,14 @@ from ...setting import RAGSettings
 from rdflib_neo4j import Neo4jStoreConfig, Neo4jStore, HANDLE_VOCAB_URI_STRATEGY
 from rdflib import Graph
 from setting.setting import RAGSettings
-from ingester_llm import LLMKnowledgeGraphBuilder
+from core.ingestion.kg_builder import LLMKnowledgeGraphBuilder
 
 class DocumentAnalyzer:
     def __init__(self, setting: RAGSettings | None = None):
         self._setting = setting or RAGSettings()        
         self.logger = logging.Logger("doc-analyzer")
         self._stored_filenames = set()
-        self.builder = LLMKnowledgeGraphBuilder(self._setting)
+        self.kg_builder = LLMKnowledgeGraphBuilder(self._setting)
         
     
     def add_to_neo4j_db(self, path_or_content: str):
@@ -34,11 +34,11 @@ class DocumentAnalyzer:
             'pwd': settings.neo4j.password
         }
 
-        # Define your custom mappings & store config
         config = Neo4jStoreConfig(auth_data=auth_data,                        
             handle_vocab_uri_strategy=HANDLE_VOCAB_URI_STRATEGY.IGNORE, batching=True)
 
         neo4j_aura = Graph(store=Neo4jStore(config=config))
+        
         # Calling the parse method will implictly open the store
         neo4j_aura.parse(path_or_content, format="ttl")
         neo4j_aura.close(True)    
@@ -69,7 +69,7 @@ class DocumentAnalyzer:
             
             document = fitz.open(input_file)
             text_per_page = []
-            for doc_idx, page in enumerate(document):
+            for _, page in enumerate(document):
                 page_text = page.get_text("text")
                 page_text = self._filter_text(page_text)
                 text_per_page.append(page_text)
@@ -79,9 +79,7 @@ class DocumentAnalyzer:
             
         
         for file_name, file_content in text_by_file_name.items():
-            result_file_content = self.builder.build_knowledge_graph_ttl(file_name, file_content)
+            result_file_content = self.kg_builder.build(file_name, file_content)
             self.add_to_neo4j_db(result_file_content)
             
         
-
-    

@@ -11,12 +11,14 @@ def get_system_prompt(is_rag_prompt: bool = True) -> str:
 SYSTEM_PROMPT_EN = """\
 This is a chat between a user and an artificial intelligence assistant. \
 The assistant gives helpful, detailed, and polite answers to the user's questions based on the context. \
-The assistant should also indicate when the answer cannot be found in the context."""
+The assistant should also indicate when the answer cannot be found in the context.
+You are working in the context of a legal environment, give your answers accordingly."""
 
 SYSTEM_PROMPT_RAG_EN = """\
 This is a chat between a user and an artificial intelligence assistant. \
 The assistant gives helpful, detailed, and polite answers to the user's questions based on the context. \
-The assistant should also indicate when the answer cannot be found in the context."""
+The assistant should also indicate when the answer cannot be found in the context.
+You are working in the context of a legal environment, give your answers accordingly."""
 
 CONTEXT_PROMPT_EN = """\
 Here are the relevant documents for the context:
